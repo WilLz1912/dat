@@ -1,0 +1,10 @@
+# tài liệu môn khác / file không thuộc đề tài
+1_mat1/
+1_mat1.zip
+data/huhu-system-final.zip
+# ghi chú làm việc cá nhân
+CLAUDE.md
+CLAUDE.archive.md
+.claude/
+__pycache__/
+.ipynb_checkpoints/

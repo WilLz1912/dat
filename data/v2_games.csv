@@ -1,0 +1,93 @@
+﻿app_id,rank,game_name,publisher,genre,is_game,game_pos_pct
+440,10,Team Fortress 2,Valve,Shooter,True,93.0
+550,13,Left 4 Dead 2,Valve,Shooter,True,97.0
+570,2,Dota 2,Valve,Competitive Multiplayer,True,80.0
+730,1,Counter-Strike 2,Valve,Shooter,True,88.0
+4000,28,Garry's Mod,Facepunch Studios,Sandbox,True,96.0
+105600,15,Terraria,Re-Logic,Sandbox,True,97.0
+107410,51,Arma 3,Bohemia Interactive,Military Sim,True,91.0
+108600,55,Project Zomboid,The Indie Stone,Survival,True,94.0
+203770,73,Crusader Kings II,Paradox Interactive,Strategy,True,90.0
+211820,96,Starbound,Chucklefish,Sandbox,True,91.0
+218620,23,Payday 2,Starbreeze Entertainment,Shooter,True,89.0
+227300,31,Euro Truck Simulator 2,SCS Software,Life & Job Sim,True,97.0
+230410,9,Warframe,Digital Extremes,Shooter,True,91.0
+233860,45,Kenshi,Lo-Fi Games,RPG,True,95.0
+236390,20,War Thunder,Gaijin Entertainment,Military Sim,True,74.0
+236850,74,Europa Universalis IV,Paradox Interactive,Strategy,True,86.0
+242760,56,The Forest,Endnight Games,Survival,True,95.0
+251570,37,7 Days to Die,The Fun Pimps,Survival,True,88.0
+252490,7,Rust,Facepunch Studios,Survival,True,87.0
+255710,33,Cities: Skylines,Paradox Interactive,Builder & Management,True,93.0
+264710,35,Subnautica,Unknown Worlds,Survival,True,96.0
+271590,5,Grand Theft Auto V,Rockstar Games,Action-Adventure,True,90.0
+275850,48,No Man's Sky,Hello Games,Exploration & Mystery,True,81.0
+281990,76,Stellaris,Paradox Interactive,Strategy,True,88.0
+289070,78,Civilization VI,2K,Strategy,True,86.0
+292030,26,The Witcher 3: Wild Hunt,CD PROJEKT RED,RPG,True,96.0
+294100,32,RimWorld,Ludeon Studios,Builder & Management,True,98.0
+304930,16,Unturned,Smartly Dressed Games,Survival,True,91.0
+322330,38,Don't Starve Together,Klei Entertainment,Survival,True,96.0
+323190,43,Frostpunk,11 bit studios,Builder & Management,True,92.0
+346110,27,ARK: Survival Evolved,Studio Wildcard,Survival,True,83.0
+359550,21,Tom Clancy's Rainbow Six Siege,Ubisoft,Shooter,True,86.0
+361420,58,Astroneer,System Era Softworks,Survival,True,92.0
+381210,25,Dead by Daylight,Behaviour Interactive,Co-op Horror,True,77.0
+393380,42,Squad,Offworld,Military Sim,True,90.0
+394360,75,Hearts of Iron IV,Paradox Interactive,Strategy,True,92.0
+413150,14,Stardew Valley,ConcernedApe,Life & Job Sim,True,98.0
+427520,81,Factorio,Wube Software,Automation,True,98.0
+431960,19,Wallpaper Engine,Wallpaper Engine Team,Software,False,98.0
+433340,62,Slime Rancher,Monomi Park,Life & Job Sim,True,97.0
+440900,52,Conan Exiles,Funcom,Survival,True,78.0
+493330,85,Planet Coaster,Frontier Developments,Builder & Management,True,90.0
+526870,36,Satisfactory,Coffee Stain Publishing,Automation,True,97.0
+548430,29,Deep Rock Galactic,Coffee Stain Publishing,Shooter,True,97.0
+553850,8,Helldivers 2,PlayStation Publishing,Shooter,True,72.0
+578080,3,PUBG: BATTLEGROUNDS,"KRAFTON, Inc.",Competitive Multiplayer,True,60.0
+582010,11,Monster Hunter: World,Capcom,RPG,True,88.0
+593590,83,Oxygen Not Included,Klei Entertainment,Builder & Management,True,96.0
+632360,44,Risk of Rain 2,Gearbox Publishing,Roguelike,True,96.0
+646570,39,Slay the Spire,MegaCrit,Roguelike,True,97.0
+648800,41,Raft,Redbeet Interactive,Survival,True,93.0
+703080,86,Planet Zoo,Frontier Developments,Builder & Management,True,90.0
+739630,17,Phasmophobia,Kinetic Games,Co-op Horror,True,96.0
+753640,50,Outer Wilds,Annapurna Interactive,Exploration & Mystery,True,97.0
+760200,91,Smalland: Survive the Wilds,Maximum Entertainment,Survival,True,81.0
+779340,80,Total War: THREE KINGDOMS,SEGA,Strategy,True,82.0
+815370,70,Green Hell,Creepy Jar,Survival,True,87.0
+895870,95,Project Wingman,Humble Games,Action-Adventure,True,94.0
+949230,77,Cities: Skylines II,Paradox Interactive,Builder & Management,True,52.0
+986130,93,Shadows of Doubt,Fireshine Games,Exploration & Mystery,True,82.0
+1086940,6,Baldur's Gate 3,Larian Studios,RPG,True,96.0
+1091500,22,Cyberpunk 2077,CD PROJEKT RED,RPG,True,92.0
+1092790,61,Inscryption,Devolver Digital,Roguelike,True,97.0
+1097150,30,Fall Guys,Epic Games,Competitive Multiplayer,True,81.0
+1129580,69,Medieval Dynasty,Toplitz Productions,Life & Job Sim,True,90.0
+1142710,79,Total War: WARHAMMER III,SEGA,Strategy,True,78.0
+1144200,66,Ready or Not,VOID Interactive,Shooter,True,88.0
+1145350,71,Hades II,Supergiant Games,Roguelike,True,95.0
+1145360,40,Hades,Supergiant Games,Roguelike,True,98.0
+1158310,46,Crusader Kings III,Paradox Interactive,Strategy,True,92.0
+1172470,4,Apex Legends,Electronic Arts,Competitive Multiplayer,True,78.0
+1172620,24,Sea of Thieves,Xbox Game Studios,Action-Adventure,True,88.0
+1244460,87,Jurassic World Evolution 2,Frontier Developments,Builder & Management,True,85.0
+1245620,12,ELDEN RING,Bandai Namco Entertainment,RPG,True,93.0
+1324130,92,Stranded: Alien Dawn,Frontier Foundry,Builder & Management,True,86.0
+1326470,57,Sons Of The Forest,Endnight Games,Survival,True,86.0
+1363080,34,Manor Lords,Hooded Horse,Builder & Management,True,88.0
+1366540,82,Dyson Sphere Program,Gamera Games,Automation,True,97.0
+1458140,64,Pacific Drive,Kepler Interactive,Survival,True,83.0
+1466860,99,Age of Empires IV: Anniversary Edition,Xbox Game Studios,Strategy,True,86.0
+1551360,53,Forza Horizon 5,Xbox Game Studios,Life & Job Sim,True,88.0
+1601580,72,Frostpunk 2,11 bit studios,Builder & Management,True,72.0
+1621690,60,Core Keeper,Fireshine Games,Sandbox,True,91.0
+1623730,18,Palworld,Pocketpair,Survival,True,93.0
+1657630,63,Slime Rancher 2,Monomi Park,Life & Job Sim,True,94.0
+1794680,54,Vampire Survivors,poncle,Roguelike,True,98.0
+1868140,49,Dave the Diver,MINTROCKET,Life & Job Sim,True,97.0
+1966720,47,Lethal Company,Zeekerss,Co-op Horror,True,97.0
+2321470,59,Deep Rock Galactic: Survivor,Ghost Ship Publishing,Roguelike,True,84.0
+2379780,68,Balatro,Playstack,Roguelike,True,97.0
+2670630,67,Supermarket Simulator,Nokta Games,Life & Job Sim,True,94.0
+2881650,65,Content Warning,Landfall,Co-op Horror,True,92.0
