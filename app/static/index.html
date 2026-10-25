@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steam Review Analyzer</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/vendor/chart.umd.min.js"></script>
+<script src="/static/vendor/vis-network.min.js"></script>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">SR</div>
+    <div>
+      <h1>Steam Review Analyzer</h1>
+      <p>Lọc review rác · chấm mức hữu ích · theo dõi phản hồi người chơi · gợi ý game</p>
+    </div>
+  </div>
+  <nav>
+    <button class="tab active" data-tab="single">Phân tích review</button>
+    <button class="tab" data-tab="batch">Kiểm duyệt hàng loạt</button>
+    <button class="tab" data-tab="overview">Tổng quan dữ liệu</button>
+    <button class="tab" data-tab="reco">Gợi ý game</button>
+  </nav>
+</header>
+
+<main>
+<!-- ============ 1. PHÂN TÍCH 1 REVIEW ============ -->
+<section id="single" class="page active">
+  <div class="intro">
+    <b>Dùng khi nào?</b> Một review vừa được đăng. Model đoán review khen hay chê, review có khả năng được vote hữu ích không,
+    và cảnh báo khi nội dung ngược với nút Recommend người viết đã bấm (mỉa mai, troll, bấm nhầm).
+  </div>
+  <div class="grid2">
+    <div class="card">
+      <h2>Nhập review (tiếng Anh)</h2>
+      <textarea id="s-text" rows="7" placeholder="Paste a Steam review here..."></textarea>
+      <div class="examples">
+        <span>Thử nhanh:</span>
+        <button class="chip" data-ex="0">Khen</button>
+        <button class="chip" data-ex="1">Chê lỗi</button>
+        <button class="chip" data-ex="2">Khen nhưng Không recommend</button>
+        <button class="chip" data-ex="3">Spam</button>
+        <button class="chip" data-ex="4">Mỉa mai</button>
+      </div>
+      <div class="row">
+        <label>Người viết bấm
+          <select id="s-vote">
+            <option value="">Không rõ</option>
+            <option value="true">Recommend 👍</option>
+            <option value="false">Không recommend 👎</option>
+          </select>
+        </label>
+        <label>Giờ chơi
+          <input id="s-pt" type="number" min="0" step="0.5" placeholder="vd 25">
+        </label>
+      </div>
+      <button id="s-run" class="primary">Phân tích</button>
+    </div>
+    <div class="card" id="s-result">
+      <div class="empty">Kết quả sẽ hiện ở đây.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. KIỂM DUYỆT HÀNG LOẠT ============ -->
+<section id="batch" class="page">
+  <div class="intro">
+    <b>Dùng khi nào?</b> Nhà phát triển muốn biết người chơi nghĩ gì về game mà không phải đọc hết hàng trăm review:
+    tỉ lệ khen/chê, ai chê nhiều (người mới hay người chơi lâu), chê về cái gì, review nào đáng ngờ, review nào hữu ích nên đọc trước.
+  </div>
+  <div class="card row wrap">
+    <label>Chọn game có sẵn trong dữ liệu
+      <select id="b-game"></select>
+    </label>
+    <button id="b-run-game" class="primary">Phân tích game này</button>
+    <span class="or">hoặc</span>
+    <label class="file">Tải file CSV
+      <input id="b-file" type="file" accept=".csv">
+    </label>
+    <span class="hint">CSV cần cột <code>review_text</code>; tuỳ chọn <code>voted_up</code>, <code>playtime</code>.</span>
+  </div>
+  <div id="b-out" class="hidden">
+    <div class="kpis" id="b-kpis"></div>
+    <div class="grid3">
+      <div class="card"><h3>Khen / chê (model đoán)</h3><div class="chartbox"><canvas id="b-pie"></canvas></div></div>
+      <div class="card"><h3>% chê theo giờ chơi</h3><div class="chartbox"><canvas id="b-pt"></canvas></div>
+        <p class="note">Cột trái = người mới chơi, cột phải = người chơi lâu năm.</p></div>
+      <div class="card"><h3>Từ hay gặp trong review chê</h3><div class="chartbox"><canvas id="b-kw"></canvas></div></div>
+    </div>
+    <div class="card">
+      <div class="row wrap between">
+        <h3>Danh sách review</h3>
+        <div class="row wrap">
+          <div class="seg" id="b-filter">
+            <button data-f="all" class="on">Tất cả</button>
+            <button data-f="sus">Đáng ngờ</button>
+            <button data-f="neg">Chê</button>
+            <button data-f="help">Hữu ích nhất</button>
+          </div>
+          <button id="b-dl" class="ghost">Tải kết quả CSV</button>
+        </div>
+      </div>
+      <div class="table-wrap"><table id="b-table"></table></div>
+    </div>
+  </div>
+  <div id="b-loading" class="loading hidden">Đang chấm điểm…</div>
+</section>
+
+<!-- ============ 3. TỔNG QUAN ============ -->
+<section id="overview" class="page">
+  <div class="intro">
+    <b>Dữ liệu train:</b> review tiếng Anh crawl từ Steam, đã làm sạch. Trang này cho thấy model học từ đâu và đạt bao nhiêu.
+  </div>
+  <div class="kpis" id="o-kpis"></div>
+  <div class="grid2">
+    <div class="card"><h3>15 game có tỉ lệ review mâu thuẫn cao nhất</h3>
+      <p class="note">Review mâu thuẫn = nội dung ngược hẳn với nút Recommend (mỉa mai, troll, bấm nhầm). Không vẽ % khen theo game vì lúc crawl mỗi game lấy ~50 khen + 50 chê.</p><div class="chartbox" style="height:480px"><canvas id="o-games"></canvas></div></div>
+    <div class="card"><h3>% review khen theo giờ chơi</h3><div class="chartbox" style="height:300px"><canvas id="o-pt"></canvas></div>
+      <p class="note">Chơi dưới 2 giờ: chỉ ~14% khen (người chơi thử rồi bỏ / refund).</p></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>So sánh model (ROC-AUC)</h3>
+      <p class="note">A = chia ngẫu nhiên; B = test trên game model chưa từng thấy.</p>
+      <div class="chartbox" style="height:300px"><canvas id="o-metrics"></canvas></div></div>
+    <div class="card"><h3>Review mâu thuẫn rõ nhất (model phát hiện)</h3><div id="o-sus" class="sus-list"></div></div>
+  </div>
+</section>
+
+<!-- ============ 4. GỢI Ý GAME ============ -->
+<section id="reco" class="page">
+  <div class="intro">
+    <b>Ý tưởng:</b> gom game theo <b>thể loại</b> và <b>nhà phát hành</b>. User đã review tích cực một game →
+    gợi ý game cùng nhóm, xếp theo % đánh giá tích cực. User chê → gợi ý thể loại khác.
+    <span class="warn">Dữ liệu minh hoạ (Data Stream v2), mỗi user chỉ có 1 review.</span>
+  </div>
+  <div class="card row wrap">
+    <label>Chọn user
+      <select id="r-user"></select>
+    </label>
+    <span class="or">hoặc</span>
+    <label>Chọn game
+      <select id="r-game"></select>
+    </label>
+    <label>User
+      <select id="r-liked">
+        <option value="true">thích game này 👍</option>
+        <option value="false">không thích 👎</option>
+      </select>
+    </label>
+    <button id="r-run" class="primary">Gợi ý</button>
+  </div>
+  <div class="grid2">
+    <div class="card"><div id="r-userbox"></div><div id="r-list"><div class="empty">Chọn user hoặc game để xem gợi ý.</div></div></div>
+    <div class="card"><h3>Đồ thị nhóm game</h3>
+      <p class="note">Chấm tròn = game (to = được khen nhiều), ô vuông = thể loại, tam giác = nhà phát hành có ≥ 2 game.</p>
+      <div id="r-graph"></div></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>Điểm trung bình theo thể loại (% tích cực)</h3><div class="chartbox" style="height:380px"><canvas id="r-genre"></canvas></div></div>
+    <div class="card"><h3>Điểm trung bình theo nhà phát hành (≥ 2 game)</h3><div class="chartbox" style="height:380px"><canvas id="r-pub"></canvas></div></div>
+  </div>
+</section>
+</main>
+<footer>Môn DAT · model Keras (TF-IDF + Dense) · chạy trên localhost · API: <a href="/docs">/docs</a></footer>
+<script src="/static/app.js"></script>
+</body>
+</html>
