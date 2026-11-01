@@ -1,0 +1,5 @@
+so với,nhóm,chênh,CI thấp,CI cao
+M4,Tất cả,0.156,0.125,0.188
+M4,Trái cảm xúc,0.0,-0.145,0.139
+DistilBERT cả câu,Tất cả,0.063,0.042,0.085
+DistilBERT cả câu,Trái cảm xúc,-0.0,-0.061,0.061

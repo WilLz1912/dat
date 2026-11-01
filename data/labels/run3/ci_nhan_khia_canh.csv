@@ -1,0 +1,4 @@
+so với,chênh,CI thấp,CI cao
+Từ khoá,0.125,0.085,0.169
+DistilBERT,0.003,-0.017,0.024
+TF-IDF + LR,0.08,0.04,0.12

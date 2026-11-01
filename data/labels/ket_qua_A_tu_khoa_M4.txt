@@ -1,0 +1,94 @@
+== M4 trên toàn tập test A, nhãn Steam: acc 0.812 AUC 0.891 n 1496
+
+== 500 review: M4 theo nhãn Steam, tách theo nhãn Claude
+  tất cả: n=500 acc=0.806 auc=0.887
+  rõ ràng (K/C + Bình thường): n=365 acc=0.868 auc=0.942
+  còn lại: n=135 acc=0.637 auc=0.672
+  Không rõ: n=71 acc=0.606 auc=0.628
+  Vừa khen vừa chê: n=25 acc=0.600 auc=0.649
+  Đùa/meme: n=76 acc=0.592 auc=0.607
+  Mỉa mai: n=8 acc=0.750 auc=None
+  Lạc đề: n=8 acc=0.625 auc=None
+  Quá ngắn: n=15 acc=0.800 auc=0.857
+
+Claude K/C khớp nhãn Steam: 383/404 = 0.948
+  Claude thấy khen nhưng Steam Not Recommended: 9
+  Claude thấy chê nhưng Steam Recommended: 12
+
+== Nguyên nhân khi M4 đoán sai (97 review)
+  model sai thật (Claude khớp Steam): 46
+  nhãn nhiễu (Claude ngược Steam): 13
+  vừa khen vừa chê: 10
+  không rõ: 28
+
+== Từ khoá nhận khía cạnh, chỉ 500 câu ngẫu nhiên
+  GFX     thật= 10 đoán= 10 precision=0.80 recall=0.80 F1=0.80
+  AUD     thật=  3 đoán=  4 precision=0.50 recall=0.67 F1=0.57
+  PLAY    thật=110 đoán= 46 precision=0.85 recall=0.35 F1=0.50
+  STORY   thật= 17 đoán= 22 precision=0.64 recall=0.82 F1=0.72
+  PERF    thật= 47 đoán= 33 precision=0.88 recall=0.62 F1=0.73
+  PRICE   thật= 24 đoán= 31 precision=0.55 recall=0.71 F1=0.62
+  ONLINE  thật= 61 đoán= 52 precision=0.81 recall=0.69 F1=0.74
+  DEV     thật= 52 đoán= 37 precision=0.76 recall=0.54 F1=0.63
+  TỔNG    precision=0.76 recall=0.55 F1=0.64
+
+== M4 chấm khen/chê cả câu, trên khía cạnh đúng (K/C), 500 câu + 110 câu thêm
+  tất cả: n=445 acc=0.753 | luôn đoán Chê: 0.667
+  câu 1 khía cạnh: n=264 acc=0.727
+  câu nhiều khía cạnh, cùng cảm xúc: n=153 acc=0.837
+  câu nhiều khía cạnh, trái cảm xúc: n=28 acc=0.536
+  chỉ khía cạnh được khen: n=148 acc=0.919
+  chỉ khía cạnh được chê: n=297 acc=0.670
+  GFX     n= 41 acc=0.854 (khen 30, chê 11)
+  AUD     n= 33 acc=0.758 (khen 16, chê 17)
+  PLAY    n=125 acc=0.696 (khen 51, chê 74)
+  STORY   n= 43 acc=0.767 (khen 16, chê 27)
+  PERF    n= 54 acc=0.815 (khen 5, chê 49)
+  PRICE   n= 38 acc=0.789 (khen 8, chê 30)
+  ONLINE  n= 54 acc=0.685 (khen 15, chê 39)
+  DEV     n= 57 acc=0.772 (khen 7, chê 50)
+
+== Toàn bộ đường ống A (từ khoá + M4), 500 câu ngẫu nhiên, cặp khía cạnh + cảm xúc (K/C)
+  đúng=126 thừa=94 thiếu=164 precision=0.57 recall=0.43 F1=0.49
+
+== Ví dụ từ khoá bỏ sót
+  ['PRICE'] this game is very good for play free
+  ['ONLINE'] Makes trying to find a decent game SO difficult.
+  ['PRICE'] It's fun but on the expensive side for what it is :D
+  ['ONLINE'] everybody in this <censored> game is a demon 2 games 2 spammers these spammer should be banned in rank because they are so <censor
+  ['PLAY'] Kill cam shows you died outside.
+  ['PERF'] it made my entire screeen orangeish and i cant change it back
+  ['PLAY'] really boring with base game mods but near unplayable with non in game mods not blaming giants some modders cant mod.
+  ['PLAY'] Nothing to do really.
+  ['PLAY'] Still needs mods for decent playability.
+  ['DEV'] Sided with a streamer, unfair treatment, how funny
+  ['STORY'] Ada's BBL jiggle mods have more personality than her.
+  ['PERF'] I have a 6900 XT, and the game ran fine at launch.
+  ['PLAY'] As a soccer fan it's more like playing soccer than FIFA.
+  ['PLAY'] A lot of your attention has to go to seeing if the game is unpaused or paused at any moment.
+
+== Ví dụ từ khoá gán thừa
+  ['ONLINE'] i think there are some people who would enjoy this, but if it were me, i would not recommend this to my friends.
+  ['PLAY'] Makes trying to find a decent game SO difficult.
+  ['PERF'] Game is literally unplayable past hour 0
+  ['PRICE'] Not worth playing.
+  ['DEV'] thank you blizzard entertainment for the free lobotomy!
+  ['PERF'] Game is at its worst state right now They need to nerf clans, and cheater problem game is unplayable.
+  ['PRICE'] good game i like how light it is but i get like a solid 40 frames max got it off of loaded website super citizen edition for the p
+  ['PLAY'] its a shame to call this 1.0 the game looks beautiful but there so many bugs and it shouldve never pass the quality control
+  ['ONLINE'] My mom would tell me to be quiet because the witch would hear me She was playing online with her xbox 360 headset
+  ['ONLINE'] They recently removed the possibility to launch and play non EAC servers on linux......
+  ['PRICE'] I pushed myself to finish it but i dont know if it was worth it
+  ['PLAY'] Not a good game allot teaming in here makes the gameplay unfair specially when you finally get imp
+  ['PLAY'] im disgusted, the chinese are taking control.
+  ['DEV'] Now progression just feels terrible compared to the original and how it was early in Early Access.
+
+== Ví dụ M4 chấm sai trên câu trái cảm xúc
+  s094 GFX:K|PERF:C its a shame to call this 1.0 the game looks beautiful but there so many bugs and it shouldve never pass the quality control
+  s165 PLAY:C|GFX:K the game is mid, couldnt figure out how to switch off the blue truck and crashed it and didnt know how to respawn it but over than that the 
+  s198 PLAY:K|DEV:C I loved the first edition and the system in this one is pretty good too, but the creator is running it down to a <censored>
+  s431 STORY:K|PLAY:C I have around 8k hours on console before i came to pc and I can say this game used to be awesome but like the only reason i play anymore is 
+  s452 PLAY:K|ONLINE:C Mediocre game, fun extraction content, but holy crap do they have a twisted way of looking at cheating.
+  s464 DEV:C|PLAY:K Absolute banger of a game when i first played this game i was a rock throwing contest dummy for looters now even in early game its so ez to 
+  x042 PLAY:C|STORY:K The gameplay is not for me, but the story and lore is great
+  x044 GFX:K|AUD:C It's a beautiful map set in Japan with some recycled cars from prior games and the weakest soundtrack ever compiled for a Horizon game.

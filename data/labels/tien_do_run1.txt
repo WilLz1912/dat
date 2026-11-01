@@ -1,0 +1,257 @@
+[01:06:55] tổng   0.0% | còn khoảng   nan phút | Baseline TF-IDF + LR
+[01:07:16] tổng   0.0% | còn khoảng   nan phút | BẮT ĐẦU Khen/chê kịch bản A, seed 0
+[01:07:41] tổng   0.5% | còn khoảng   157 phút | Khen/chê kịch bản A, seed 0 epoch 1/3: batch 50, loss 0.695
+[01:08:02] tổng   1.0% | còn khoảng   115 phút | Khen/chê kịch bản A, seed 0 epoch 1/3: batch 100, loss 0.656
+[01:08:23] tổng   1.5% | còn khoảng   100 phút | Khen/chê kịch bản A, seed 0 epoch 1/3: batch 150, loss 0.593
+[01:08:44] tổng   1.9% | còn khoảng    93 phút | Khen/chê kịch bản A, seed 0 epoch 1/3: batch 200, loss 0.556
+[01:09:06] tổng   2.4% | còn khoảng    88 phút | Khen/chê kịch bản A, seed 0 epoch 1/3: batch 250, loss 0.521
+[01:09:27] tổng   2.9% | còn khoảng    85 phút | Khen/chê kịch bản A, seed 0 epoch 1/3: batch 300, loss 0.496
+[01:09:48] tổng   3.4% | còn khoảng    83 phút | Khen/chê kịch bản A, seed 0 epoch 1/3: batch 350, loss 0.479
+[01:10:09] tổng   3.9% | còn khoảng    81 phút | Khen/chê kịch bản A, seed 0 epoch 1/3: batch 400, loss 0.467
+[01:10:35] tổng   4.2% | còn khoảng    84 phút | Khen/chê kịch bản A, seed 0 xong epoch 1/3: điểm dev 0.9224
+[01:10:57] tổng   4.7% | còn khoảng    82 phút | Khen/chê kịch bản A, seed 0 epoch 2/3: batch 50, loss 0.258
+[01:11:19] tổng   5.2% | còn khoảng    81 phút | Khen/chê kịch bản A, seed 0 epoch 2/3: batch 100, loss 0.255
+[01:11:40] tổng   5.7% | còn khoảng    79 phút | Khen/chê kịch bản A, seed 0 epoch 2/3: batch 150, loss 0.271
+[01:12:02] tổng   6.1% | còn khoảng    78 phút | Khen/chê kịch bản A, seed 0 epoch 2/3: batch 200, loss 0.273
+[01:12:23] tổng   6.6% | còn khoảng    77 phút | Khen/chê kịch bản A, seed 0 epoch 2/3: batch 250, loss 0.278
+[01:12:45] tổng   7.1% | còn khoảng    76 phút | Khen/chê kịch bản A, seed 0 epoch 2/3: batch 300, loss 0.280
+[01:13:06] tổng   7.6% | còn khoảng    76 phút | Khen/chê kịch bản A, seed 0 epoch 2/3: batch 350, loss 0.270
+[01:13:27] tổng   8.1% | còn khoảng    75 phút | Khen/chê kịch bản A, seed 0 epoch 2/3: batch 400, loss 0.270
+[01:13:53] tổng   8.4% | còn khoảng    76 phút | Khen/chê kịch bản A, seed 0 xong epoch 2/3: điểm dev 0.9329
+[01:14:15] tổng   8.9% | còn khoảng    75 phút | Khen/chê kịch bản A, seed 0 epoch 3/3: batch 50, loss 0.193
+[01:14:37] tổng   9.4% | còn khoảng    74 phút | Khen/chê kịch bản A, seed 0 epoch 3/3: batch 100, loss 0.179
+[01:14:58] tổng   9.8% | còn khoảng    74 phút | Khen/chê kịch bản A, seed 0 epoch 3/3: batch 150, loss 0.179
+[01:15:19] tổng  10.3% | còn khoảng    73 phút | Khen/chê kịch bản A, seed 0 epoch 3/3: batch 200, loss 0.169
+[01:15:40] tổng  10.8% | còn khoảng    72 phút | Khen/chê kịch bản A, seed 0 epoch 3/3: batch 250, loss 0.175
+[01:16:01] tổng  11.3% | còn khoảng    72 phút | Khen/chê kịch bản A, seed 0 epoch 3/3: batch 300, loss 0.172
+[01:16:23] tổng  11.8% | còn khoảng    71 phút | Khen/chê kịch bản A, seed 0 epoch 3/3: batch 350, loss 0.171
+[01:16:44] tổng  12.3% | còn khoảng    70 phút | Khen/chê kịch bản A, seed 0 epoch 3/3: batch 400, loss 0.170
+[01:17:10] tổng  12.6% | còn khoảng    71 phút | Khen/chê kịch bản A, seed 0 xong epoch 3/3: điểm dev 0.9318
+[01:17:21] tổng  12.6% | còn khoảng    72 phút | XONG Khen/chê kịch bản A, seed 0: AUC test 0.9374
+[01:17:30] tổng  12.6% | còn khoảng    73 phút | BẮT ĐẦU Khen/chê kịch bản A, seed 1
+[01:17:53] tổng  13.1% | còn khoảng    73 phút | Khen/chê kịch bản A, seed 1 epoch 1/3: batch 50, loss 0.709
+[01:18:15] tổng  13.6% | còn khoảng    72 phút | Khen/chê kịch bản A, seed 1 epoch 1/3: batch 100, loss 0.633
+[01:18:36] tổng  14.0% | còn khoảng    71 phút | Khen/chê kịch bản A, seed 1 epoch 1/3: batch 150, loss 0.568
+[01:18:57] tổng  14.5% | còn khoảng    71 phút | Khen/chê kịch bản A, seed 1 epoch 1/3: batch 200, loss 0.532
+[01:19:18] tổng  15.0% | còn khoảng    70 phút | Khen/chê kịch bản A, seed 1 epoch 1/3: batch 250, loss 0.505
+[01:19:40] tổng  15.5% | còn khoảng    70 phút | Khen/chê kịch bản A, seed 1 epoch 1/3: batch 300, loss 0.483
+[01:20:01] tổng  16.0% | còn khoảng    69 phút | Khen/chê kịch bản A, seed 1 epoch 1/3: batch 350, loss 0.468
+[01:20:22] tổng  16.5% | còn khoảng    68 phút | Khen/chê kịch bản A, seed 1 epoch 1/3: batch 400, loss 0.452
+[01:20:48] tổng  16.8% | còn khoảng    69 phút | Khen/chê kịch bản A, seed 1 xong epoch 1/3: điểm dev 0.9266
+[01:21:10] tổng  17.3% | còn khoảng    68 phút | Khen/chê kịch bản A, seed 1 epoch 2/3: batch 50, loss 0.275
+[01:21:32] tổng  17.8% | còn khoảng    68 phút | Khen/chê kịch bản A, seed 1 epoch 2/3: batch 100, loss 0.267
+[01:21:53] tổng  18.2% | còn khoảng    67 phút | Khen/chê kịch bản A, seed 1 epoch 2/3: batch 150, loss 0.265
+[01:22:14] tổng  18.7% | còn khoảng    67 phút | Khen/chê kịch bản A, seed 1 epoch 2/3: batch 200, loss 0.273
+[01:22:36] tổng  19.2% | còn khoảng    66 phút | Khen/chê kịch bản A, seed 1 epoch 2/3: batch 250, loss 0.265
+[01:22:57] tổng  19.7% | còn khoảng    65 phút | Khen/chê kịch bản A, seed 1 epoch 2/3: batch 300, loss 0.264
+[01:23:18] tổng  20.2% | còn khoảng    65 phút | Khen/chê kịch bản A, seed 1 epoch 2/3: batch 350, loss 0.266
+[01:23:39] tổng  20.6% | còn khoảng    64 phút | Khen/chê kịch bản A, seed 1 epoch 2/3: batch 400, loss 0.262
+[01:24:05] tổng  21.0% | còn khoảng    65 phút | Khen/chê kịch bản A, seed 1 xong epoch 2/3: điểm dev 0.9343
+[01:24:27] tổng  21.5% | còn khoảng    64 phút | Khen/chê kịch bản A, seed 1 epoch 3/3: batch 50, loss 0.174
+[01:24:49] tổng  22.0% | còn khoảng    64 phút | Khen/chê kịch bản A, seed 1 epoch 3/3: batch 100, loss 0.161
+[01:25:10] tổng  22.4% | còn khoảng    63 phút | Khen/chê kịch bản A, seed 1 epoch 3/3: batch 150, loss 0.165
+[01:25:31] tổng  22.9% | còn khoảng    63 phút | Khen/chê kịch bản A, seed 1 epoch 3/3: batch 200, loss 0.171
+[01:25:52] tổng  23.4% | còn khoảng    62 phút | Khen/chê kịch bản A, seed 1 epoch 3/3: batch 250, loss 0.166
+[01:26:14] tổng  23.9% | còn khoảng    62 phút | Khen/chê kịch bản A, seed 1 epoch 3/3: batch 300, loss 0.162
+[01:26:35] tổng  24.4% | còn khoảng    61 phút | Khen/chê kịch bản A, seed 1 epoch 3/3: batch 350, loss 0.162
+[01:26:56] tổng  24.8% | còn khoảng    61 phút | Khen/chê kịch bản A, seed 1 epoch 3/3: batch 400, loss 0.162
+[01:27:22] tổng  25.2% | còn khoảng    61 phút | Khen/chê kịch bản A, seed 1 xong epoch 3/3: điểm dev 0.9323
+[01:27:33] tổng  25.2% | còn khoảng    61 phút | XONG Khen/chê kịch bản A, seed 1: AUC test 0.9347
+[01:27:42] tổng  25.2% | còn khoảng    62 phút | BẮT ĐẦU Khen/chê kịch bản A, seed 2
+[01:28:05] tổng  25.7% | còn khoảng    61 phút | Khen/chê kịch bản A, seed 2 epoch 1/3: batch 50, loss 0.678
+[01:28:27] tổng  26.2% | còn khoảng    61 phút | Khen/chê kịch bản A, seed 2 epoch 1/3: batch 100, loss 0.610
+[01:28:48] tổng  26.6% | còn khoảng    60 phút | Khen/chê kịch bản A, seed 2 epoch 1/3: batch 150, loss 0.547
+[01:29:09] tổng  27.1% | còn khoảng    60 phút | Khen/chê kịch bản A, seed 2 epoch 1/3: batch 200, loss 0.521
+[01:29:30] tổng  27.6% | còn khoảng    59 phút | Khen/chê kịch bản A, seed 2 epoch 1/3: batch 250, loss 0.499
+[01:29:52] tổng  28.1% | còn khoảng    59 phút | Khen/chê kịch bản A, seed 2 epoch 1/3: batch 300, loss 0.478
+[01:30:13] tổng  28.6% | còn khoảng    58 phút | Khen/chê kịch bản A, seed 2 epoch 1/3: batch 350, loss 0.460
+[01:30:34] tổng  29.0% | còn khoảng    58 phút | Khen/chê kịch bản A, seed 2 epoch 1/3: batch 400, loss 0.450
+[01:31:00] tổng  29.4% | còn khoảng    58 phút | Khen/chê kịch bản A, seed 2 xong epoch 1/3: điểm dev 0.9284
+[01:31:22] tổng  29.9% | còn khoảng    57 phút | Khen/chê kịch bản A, seed 2 epoch 2/3: batch 50, loss 0.226
+[01:31:44] tổng  30.4% | còn khoảng    57 phút | Khen/chê kịch bản A, seed 2 epoch 2/3: batch 100, loss 0.260
+[01:32:05] tổng  30.8% | còn khoảng    56 phút | Khen/chê kịch bản A, seed 2 epoch 2/3: batch 150, loss 0.261
+[01:32:26] tổng  31.3% | còn khoảng    56 phút | Khen/chê kịch bản A, seed 2 epoch 2/3: batch 200, loss 0.269
+[01:32:47] tổng  31.8% | còn khoảng    55 phút | Khen/chê kịch bản A, seed 2 epoch 2/3: batch 250, loss 0.260
+[01:33:09] tổng  32.3% | còn khoảng    55 phút | Khen/chê kịch bản A, seed 2 epoch 2/3: batch 300, loss 0.270
+[01:33:30] tổng  32.8% | còn khoảng    55 phút | Khen/chê kịch bản A, seed 2 epoch 2/3: batch 350, loss 0.266
+[01:33:51] tổng  33.2% | còn khoảng    54 phút | Khen/chê kịch bản A, seed 2 epoch 2/3: batch 400, loss 0.262
+[01:34:17] tổng  33.6% | còn khoảng    54 phút | Khen/chê kịch bản A, seed 2 xong epoch 2/3: điểm dev 0.9322
+[01:34:39] tổng  34.1% | còn khoảng    54 phút | Khen/chê kịch bản A, seed 2 epoch 3/3: batch 50, loss 0.206
+[01:35:01] tổng  34.6% | còn khoảng    53 phút | Khen/chê kịch bản A, seed 2 epoch 3/3: batch 100, loss 0.188
+[01:35:22] tổng  35.0% | còn khoảng    53 phút | Khen/chê kịch bản A, seed 2 epoch 3/3: batch 150, loss 0.181
+[01:35:43] tổng  35.5% | còn khoảng    52 phút | Khen/chê kịch bản A, seed 2 epoch 3/3: batch 200, loss 0.178
+[01:36:04] tổng  36.0% | còn khoảng    52 phút | Khen/chê kịch bản A, seed 2 epoch 3/3: batch 250, loss 0.171
+[01:36:25] tổng  36.5% | còn khoảng    51 phút | Khen/chê kịch bản A, seed 2 epoch 3/3: batch 300, loss 0.176
+[01:36:47] tổng  37.0% | còn khoảng    51 phút | Khen/chê kịch bản A, seed 2 epoch 3/3: batch 350, loss 0.171
+[01:37:08] tổng  37.4% | còn khoảng    50 phút | Khen/chê kịch bản A, seed 2 epoch 3/3: batch 400, loss 0.169
+[01:37:34] tổng  37.8% | còn khoảng    50 phút | Khen/chê kịch bản A, seed 2 xong epoch 3/3: điểm dev 0.9321
+[01:37:45] tổng  37.8% | còn khoảng    51 phút | XONG Khen/chê kịch bản A, seed 2: AUC test 0.9385
+[01:37:54] tổng  37.8% | còn khoảng    51 phút | BẮT ĐẦU Khen/chê kịch bản B, seed 0
+[01:38:17] tổng  38.3% | còn khoảng    51 phút | Khen/chê kịch bản B, seed 0 epoch 1/3: batch 50, loss 0.701
+[01:38:38] tổng  38.8% | còn khoảng    50 phút | Khen/chê kịch bản B, seed 0 epoch 1/3: batch 100, loss 0.650
+[01:39:00] tổng  39.2% | còn khoảng    50 phút | Khen/chê kịch bản B, seed 0 epoch 1/3: batch 150, loss 0.583
+[01:39:21] tổng  39.7% | còn khoảng    49 phút | Khen/chê kịch bản B, seed 0 epoch 1/3: batch 200, loss 0.539
+[01:39:42] tổng  40.2% | còn khoảng    49 phút | Khen/chê kịch bản B, seed 0 epoch 1/3: batch 250, loss 0.508
+[01:40:03] tổng  40.7% | còn khoảng    48 phút | Khen/chê kịch bản B, seed 0 epoch 1/3: batch 300, loss 0.485
+[01:40:25] tổng  41.2% | còn khoảng    48 phút | Khen/chê kịch bản B, seed 0 epoch 1/3: batch 350, loss 0.472
+[01:40:46] tổng  41.6% | còn khoảng    47 phút | Khen/chê kịch bản B, seed 0 epoch 1/3: batch 400, loss 0.466
+[01:41:05] tổng  41.9% | còn khoảng    47 phút | Khen/chê kịch bản B, seed 0 xong epoch 1/3: điểm dev 0.9270
+[01:41:27] tổng  42.4% | còn khoảng    47 phút | Khen/chê kịch bản B, seed 0 epoch 2/3: batch 50, loss 0.301
+[01:41:49] tổng  42.9% | còn khoảng    47 phút | Khen/chê kịch bản B, seed 0 epoch 2/3: batch 100, loss 0.291
+[01:42:10] tổng  43.3% | còn khoảng    46 phút | Khen/chê kịch bản B, seed 0 epoch 2/3: batch 150, loss 0.277
+[01:42:31] tổng  43.8% | còn khoảng    46 phút | Khen/chê kịch bản B, seed 0 epoch 2/3: batch 200, loss 0.276
+[01:42:53] tổng  44.3% | còn khoảng    45 phút | Khen/chê kịch bản B, seed 0 epoch 2/3: batch 250, loss 0.281
+[01:43:14] tổng  44.8% | còn khoảng    45 phút | Khen/chê kịch bản B, seed 0 epoch 2/3: batch 300, loss 0.277
+[01:43:35] tổng  45.3% | còn khoảng    44 phút | Khen/chê kịch bản B, seed 0 epoch 2/3: batch 350, loss 0.271
+[01:43:56] tổng  45.7% | còn khoảng    44 phút | Khen/chê kịch bản B, seed 0 epoch 2/3: batch 400, loss 0.267
+[01:44:16] tổng  46.0% | còn khoảng    44 phút | Khen/chê kịch bản B, seed 0 xong epoch 2/3: điểm dev 0.9360
+[01:44:38] tổng  46.5% | còn khoảng    43 phút | Khen/chê kịch bản B, seed 0 epoch 3/3: batch 50, loss 0.171
+[01:44:59] tổng  46.9% | còn khoảng    43 phút | Khen/chê kịch bản B, seed 0 epoch 3/3: batch 100, loss 0.156
+[01:45:29] tổng  47.4% | còn khoảng    43 phút | Khen/chê kịch bản B, seed 0 epoch 3/3: batch 150, loss 0.161
+[01:45:57] tổng  47.9% | còn khoảng    42 phút | Khen/chê kịch bản B, seed 0 epoch 3/3: batch 200, loss 0.164
+[01:46:24] tổng  48.4% | còn khoảng    42 phút | Khen/chê kịch bản B, seed 0 epoch 3/3: batch 250, loss 0.166
+[01:46:52] tổng  48.9% | còn khoảng    42 phút | Khen/chê kịch bản B, seed 0 epoch 3/3: batch 300, loss 0.161
+[01:47:20] tổng  49.4% | còn khoảng    41 phút | Khen/chê kịch bản B, seed 0 epoch 3/3: batch 350, loss 0.164
+[01:47:48] tổng  49.8% | còn khoảng    41 phút | Khen/chê kịch bản B, seed 0 epoch 3/3: batch 400, loss 0.165
+[01:48:14] tổng  50.1% | còn khoảng    41 phút | Khen/chê kịch bản B, seed 0 xong epoch 3/3: điểm dev 0.9347
+[01:48:35] tổng  50.1% | còn khoảng    42 phút | XONG Khen/chê kịch bản B, seed 0: AUC test 0.9319
+[01:48:35] tổng  50.1% | còn khoảng    42 phút | BẮT ĐẦU Khen/chê kịch bản B, seed 1
+[01:49:07] tổng  50.6% | còn khoảng    41 phút | Khen/chê kịch bản B, seed 1 epoch 1/3: batch 50, loss 0.708
+[01:49:36] tổng  51.0% | còn khoảng    41 phút | Khen/chê kịch bản B, seed 1 epoch 1/3: batch 100, loss 0.642
+[01:50:05] tổng  51.5% | còn khoảng    41 phút | Khen/chê kịch bản B, seed 1 epoch 1/3: batch 150, loss 0.581
+[01:50:33] tổng  52.0% | còn khoảng    40 phút | Khen/chê kịch bản B, seed 1 epoch 1/3: batch 200, loss 0.551
+[01:51:02] tổng  52.5% | còn khoảng    40 phút | Khen/chê kịch bản B, seed 1 epoch 1/3: batch 250, loss 0.517
+[01:51:31] tổng  53.0% | còn khoảng    40 phút | Khen/chê kịch bản B, seed 1 epoch 1/3: batch 300, loss 0.499
+[01:52:00] tổng  53.4% | còn khoảng    39 phút | Khen/chê kịch bản B, seed 1 epoch 1/3: batch 350, loss 0.478
+[01:52:29] tổng  53.9% | còn khoảng    39 phút | Khen/chê kịch bản B, seed 1 epoch 1/3: batch 400, loss 0.468
+[01:52:56] tổng  54.2% | còn khoảng    39 phút | Khen/chê kịch bản B, seed 1 xong epoch 1/3: điểm dev 0.9296
+[01:53:26] tổng  54.7% | còn khoảng    39 phút | Khen/chê kịch bản B, seed 1 epoch 2/3: batch 50, loss 0.291
+[01:53:55] tổng  55.1% | còn khoảng    38 phút | Khen/chê kịch bản B, seed 1 epoch 2/3: batch 100, loss 0.285
+[01:54:24] tổng  55.6% | còn khoảng    38 phút | Khen/chê kịch bản B, seed 1 epoch 2/3: batch 150, loss 0.276
+[01:54:53] tổng  56.1% | còn khoảng    38 phút | Khen/chê kịch bản B, seed 1 epoch 2/3: batch 200, loss 0.268
+[01:55:22] tổng  56.6% | còn khoảng    37 phút | Khen/chê kịch bản B, seed 1 epoch 2/3: batch 250, loss 0.262
+[01:55:52] tổng  57.1% | còn khoảng    37 phút | Khen/chê kịch bản B, seed 1 epoch 2/3: batch 300, loss 0.258
+[01:56:21] tổng  57.5% | còn khoảng    36 phút | Khen/chê kịch bản B, seed 1 epoch 2/3: batch 350, loss 0.260
+[01:56:51] tổng  58.0% | còn khoảng    36 phút | Khen/chê kịch bản B, seed 1 epoch 2/3: batch 400, loss 0.261
+[01:57:19] tổng  58.3% | còn khoảng    36 phút | Khen/chê kịch bản B, seed 1 xong epoch 2/3: điểm dev 0.9353
+[01:57:50] tổng  58.7% | còn khoảng    36 phút | Khen/chê kịch bản B, seed 1 epoch 3/3: batch 50, loss 0.189
+[01:58:20] tổng  59.2% | còn khoảng    35 phút | Khen/chê kịch bản B, seed 1 epoch 3/3: batch 100, loss 0.172
+[01:58:50] tổng  59.7% | còn khoảng    35 phút | Khen/chê kịch bản B, seed 1 epoch 3/3: batch 150, loss 0.175
+[01:59:22] tổng  60.2% | còn khoảng    35 phút | Khen/chê kịch bản B, seed 1 epoch 3/3: batch 200, loss 0.179
+[01:59:53] tổng  60.7% | còn khoảng    34 phút | Khen/chê kịch bản B, seed 1 epoch 3/3: batch 250, loss 0.180
+[02:00:25] tổng  61.2% | còn khoảng    34 phút | Khen/chê kịch bản B, seed 1 epoch 3/3: batch 300, loss 0.178
+[02:00:57] tổng  61.6% | còn khoảng    34 phút | Khen/chê kịch bản B, seed 1 epoch 3/3: batch 350, loss 0.178
+[02:01:32] tổng  62.1% | còn khoảng    33 phút | Khen/chê kịch bản B, seed 1 epoch 3/3: batch 400, loss 0.177
+[02:02:06] tổng  62.4% | còn khoảng    33 phút | Khen/chê kịch bản B, seed 1 xong epoch 3/3: điểm dev 0.9373
+[02:02:37] tổng  62.4% | còn khoảng    34 phút | XONG Khen/chê kịch bản B, seed 1: AUC test 0.9299
+[02:02:37] tổng  62.4% | còn khoảng    34 phút | BẮT ĐẦU Khen/chê kịch bản B, seed 2
+[02:03:16] tổng  62.8% | còn khoảng    33 phút | Khen/chê kịch bản B, seed 2 epoch 1/3: batch 50, loss 0.685
+[02:03:50] tổng  63.3% | còn khoảng    33 phút | Khen/chê kịch bản B, seed 2 epoch 1/3: batch 100, loss 0.599
+[02:04:35] tổng  63.8% | còn khoảng    33 phút | Khen/chê kịch bản B, seed 2 epoch 1/3: batch 150, loss 0.549
+[02:05:26] tổng  64.3% | còn khoảng    33 phút | Khen/chê kịch bản B, seed 2 epoch 1/3: batch 200, loss 0.522
+[02:06:41] tổng  64.8% | còn khoảng    33 phút | Khen/chê kịch bản B, seed 2 epoch 1/3: batch 250, loss 0.499
+[02:08:04] tổng  65.2% | còn khoảng    33 phút | Khen/chê kịch bản B, seed 2 epoch 1/3: batch 300, loss 0.477
+[02:09:22] tổng  65.7% | còn khoảng    33 phút | Khen/chê kịch bản B, seed 2 epoch 1/3: batch 350, loss 0.460
+[02:10:46] tổng  66.2% | còn khoảng    33 phút | Khen/chê kịch bản B, seed 2 epoch 1/3: batch 400, loss 0.448
+[02:12:15] tổng  66.4% | còn khoảng    33 phút | Khen/chê kịch bản B, seed 2 xong epoch 1/3: điểm dev 0.9234
+[02:15:21] tổng  66.9% | còn khoảng    34 phút | Khen/chê kịch bản B, seed 2 epoch 2/3: batch 50, loss 0.289
+[15:33:46] tổng  67.4% | còn khoảng   419 phút | Khen/chê kịch bản B, seed 2 epoch 2/3: batch 100, loss 0.291
+[15:34:11] tổng  67.9% | còn khoảng   410 phút | Khen/chê kịch bản B, seed 2 epoch 2/3: batch 150, loss 0.296
+[15:34:34] tổng  68.4% | còn khoảng   401 phút | Khen/chê kịch bản B, seed 2 epoch 2/3: batch 200, loss 0.281
+[15:34:57] tổng  68.9% | còn khoảng   393 phút | Khen/chê kịch bản B, seed 2 epoch 2/3: batch 250, loss 0.278
+[15:35:20] tổng  69.3% | còn khoảng   384 phút | Khen/chê kịch bản B, seed 2 epoch 2/3: batch 300, loss 0.277
+[15:35:44] tổng  69.8% | còn khoảng   376 phút | Khen/chê kịch bản B, seed 2 epoch 2/3: batch 350, loss 0.271
+[15:36:06] tổng  70.3% | còn khoảng   367 phút | Khen/chê kịch bản B, seed 2 epoch 2/3: batch 400, loss 0.270
+[15:36:26] tổng  70.5% | còn khoảng   363 phút | Khen/chê kịch bản B, seed 2 xong epoch 2/3: điểm dev 0.9345
+[15:36:49] tổng  71.0% | còn khoảng   355 phút | Khen/chê kịch bản B, seed 2 epoch 3/3: batch 50, loss 0.143
+[15:37:11] tổng  71.5% | còn khoảng   347 phút | Khen/chê kịch bản B, seed 2 epoch 3/3: batch 100, loss 0.165
+[15:37:34] tổng  72.0% | còn khoảng   339 phút | Khen/chê kịch bản B, seed 2 epoch 3/3: batch 150, loss 0.159
+[15:37:56] tổng  72.5% | còn khoảng   331 phút | Khen/chê kịch bản B, seed 2 epoch 3/3: batch 200, loss 0.163
+[15:38:18] tổng  73.0% | còn khoảng   323 phút | Khen/chê kịch bản B, seed 2 epoch 3/3: batch 250, loss 0.160
+[15:38:40] tổng  73.4% | còn khoảng   315 phút | Khen/chê kịch bản B, seed 2 epoch 3/3: batch 300, loss 0.164
+[15:39:04] tổng  73.9% | còn khoảng   308 phút | Khen/chê kịch bản B, seed 2 epoch 3/3: batch 350, loss 0.167
+[15:39:26] tổng  74.4% | còn khoảng   300 phút | Khen/chê kịch bản B, seed 2 epoch 3/3: batch 400, loss 0.168
+[15:39:46] tổng  74.6% | còn khoảng   297 phút | Khen/chê kịch bản B, seed 2 xong epoch 3/3: điểm dev 0.9358
+[15:40:01] tổng  74.6% | còn khoảng   297 phút | XONG Khen/chê kịch bản B, seed 2: AUC test 0.9293
+[15:40:19] tổng  74.6% | còn khoảng   297 phút | BẮT ĐẦU Nhận khía cạnh, seed 0
+[15:40:43] tổng  75.1% | còn khoảng   289 phút | Nhận khía cạnh, seed 0 epoch 1/6: batch 50, loss 0.473
+[15:40:58] tổng  75.4% | còn khoảng   285 phút | Nhận khía cạnh, seed 0 xong epoch 1/6: điểm dev 0.3636
+[15:41:20] tổng  75.9% | còn khoảng   278 phút | Nhận khía cạnh, seed 0 epoch 2/6: batch 50, loss 0.249
+[15:41:34] tổng  76.2% | còn khoảng   274 phút | Nhận khía cạnh, seed 0 xong epoch 2/6: điểm dev 0.6070
+[15:41:57] tổng  76.7% | còn khoảng   266 phút | Nhận khía cạnh, seed 0 epoch 3/6: batch 50, loss 0.153
+[15:42:11] tổng  76.9% | còn khoảng   262 phút | Nhận khía cạnh, seed 0 xong epoch 3/6: điểm dev 0.7046
+[15:42:33] tổng  77.4% | còn khoảng   255 phút | Nhận khía cạnh, seed 0 epoch 4/6: batch 50, loss 0.100
+[15:42:47] tổng  77.7% | còn khoảng   251 phút | Nhận khía cạnh, seed 0 xong epoch 4/6: điểm dev 0.7011
+[15:43:09] tổng  78.2% | còn khoảng   244 phút | Nhận khía cạnh, seed 0 epoch 5/6: batch 50, loss 0.066
+[15:43:22] tổng  78.5% | còn khoảng   240 phút | Nhận khía cạnh, seed 0 xong epoch 5/6: điểm dev 0.7109
+[15:43:45] tổng  79.0% | còn khoảng   234 phút | Nhận khía cạnh, seed 0 epoch 6/6: batch 50, loss 0.052
+[15:43:59] tổng  79.2% | còn khoảng   230 phút | Nhận khía cạnh, seed 0 xong epoch 6/6: điểm dev 0.7084
+[15:44:04] tổng  79.2% | còn khoảng   230 phút | XONG Nhận khía cạnh, seed 0: micro F1 test 0.605
+[15:44:05] tổng  79.2% | còn khoảng   230 phút | BẮT ĐẦU Nhận khía cạnh, seed 1
+[15:44:28] tổng  79.7% | còn khoảng   223 phút | Nhận khía cạnh, seed 1 epoch 1/6: batch 50, loss 0.490
+[15:44:42] tổng  80.0% | còn khoảng   219 phút | Nhận khía cạnh, seed 1 xong epoch 1/6: điểm dev 0.4529
+[15:45:04] tổng  80.5% | còn khoảng   213 phút | Nhận khía cạnh, seed 1 epoch 2/6: batch 50, loss 0.239
+[15:45:18] tổng  80.8% | còn khoảng   209 phút | Nhận khía cạnh, seed 1 xong epoch 2/6: điểm dev 0.6383
+[15:45:41] tổng  81.3% | còn khoảng   202 phút | Nhận khía cạnh, seed 1 epoch 3/6: batch 50, loss 0.142
+[15:45:55] tổng  81.6% | còn khoảng   199 phút | Nhận khía cạnh, seed 1 xong epoch 3/6: điểm dev 0.6772
+[15:46:17] tổng  82.0% | còn khoảng   192 phút | Nhận khía cạnh, seed 1 epoch 4/6: batch 50, loss 0.092
+[15:46:31] tổng  82.3% | còn khoảng   189 phút | Nhận khía cạnh, seed 1 xong epoch 4/6: điểm dev 0.6993
+[15:46:55] tổng  82.8% | còn khoảng   183 phút | Nhận khía cạnh, seed 1 epoch 5/6: batch 50, loss 0.065
+[15:47:09] tổng  83.1% | còn khoảng   179 phút | Nhận khía cạnh, seed 1 xong epoch 5/6: điểm dev 0.7245
+[15:47:31] tổng  83.6% | còn khoảng   173 phút | Nhận khía cạnh, seed 1 epoch 6/6: batch 50, loss 0.049
+[15:47:45] tổng  83.9% | còn khoảng   170 phút | Nhận khía cạnh, seed 1 xong epoch 6/6: điểm dev 0.7167
+[15:47:51] tổng  83.9% | còn khoảng   170 phút | XONG Nhận khía cạnh, seed 1: micro F1 test 0.615
+[15:47:51] tổng  83.9% | còn khoảng   170 phút | BẮT ĐẦU Nhận khía cạnh, seed 2
+[15:48:15] tổng  84.3% | còn khoảng   164 phút | Nhận khía cạnh, seed 2 epoch 1/6: batch 50, loss 0.473
+[15:48:28] tổng  84.6% | còn khoảng   160 phút | Nhận khía cạnh, seed 2 xong epoch 1/6: điểm dev 0.3750
+[15:48:51] tổng  85.1% | còn khoảng   154 phút | Nhận khía cạnh, seed 2 epoch 2/6: batch 50, loss 0.222
+[15:49:05] tổng  85.4% | còn khoảng   151 phút | Nhận khía cạnh, seed 2 xong epoch 2/6: điểm dev 0.6841
+[15:49:27] tổng  85.9% | còn khoảng   145 phút | Nhận khía cạnh, seed 2 epoch 3/6: batch 50, loss 0.143
+[15:49:41] tổng  86.2% | còn khoảng   142 phút | Nhận khía cạnh, seed 2 xong epoch 3/6: điểm dev 0.6826
+[15:50:03] tổng  86.7% | còn khoảng   136 phút | Nhận khía cạnh, seed 2 epoch 4/6: batch 50, loss 0.085
+[15:50:17] tổng  86.9% | còn khoảng   133 phút | Nhận khía cạnh, seed 2 xong epoch 4/6: điểm dev 0.6989
+[15:50:39] tổng  87.4% | còn khoảng   127 phút | Nhận khía cạnh, seed 2 epoch 5/6: batch 50, loss 0.063
+[15:50:53] tổng  87.7% | còn khoảng   124 phút | Nhận khía cạnh, seed 2 xong epoch 5/6: điểm dev 0.7234
+[15:51:16] tổng  88.2% | còn khoảng   118 phút | Nhận khía cạnh, seed 2 epoch 6/6: batch 50, loss 0.047
+[15:51:30] tổng  88.5% | còn khoảng   115 phút | Nhận khía cạnh, seed 2 xong epoch 6/6: điểm dev 0.7155
+[15:51:35] tổng  88.5% | còn khoảng   115 phút | XONG Nhận khía cạnh, seed 2: micro F1 test 0.628
+[15:51:36] tổng  88.5% | còn khoảng   115 phút | BẮT ĐẦU Khen/chê theo cặp, seed 0
+[15:52:00] tổng  89.0% | còn khoảng   110 phút | Khen/chê theo cặp, seed 0 epoch 1/5: batch 50, loss 0.275
+[15:52:10] tổng  89.2% | còn khoảng   108 phút | Khen/chê theo cặp, seed 0 xong epoch 1/5: điểm dev 0.9911
+[15:52:32] tổng  89.6% | còn khoảng   102 phút | Khen/chê theo cặp, seed 0 epoch 2/5: batch 50, loss 0.175
+[15:52:43] tổng  89.8% | còn khoảng   100 phút | Khen/chê theo cặp, seed 0 xong epoch 2/5: điểm dev 0.9922
+[15:53:05] tổng  90.3% | còn khoảng    95 phút | Khen/chê theo cặp, seed 0 epoch 3/5: batch 50, loss 0.114
+[15:53:15] tổng  90.5% | còn khoảng    93 phút | Khen/chê theo cặp, seed 0 xong epoch 3/5: điểm dev 0.9934
+[15:53:38] tổng  91.0% | còn khoảng    88 phút | Khen/chê theo cặp, seed 0 epoch 4/5: batch 50, loss 0.066
+[15:53:48] tổng  91.2% | còn khoảng    86 phút | Khen/chê theo cặp, seed 0 xong epoch 4/5: điểm dev 0.9906
+[15:54:10] tổng  91.7% | còn khoảng    80 phút | Khen/chê theo cặp, seed 0 epoch 5/5: batch 50, loss 0.056
+[15:54:20] tổng  91.9% | còn khoảng    78 phút | Khen/chê theo cặp, seed 0 xong epoch 5/5: điểm dev 0.9910
+[15:54:23] tổng  91.9% | còn khoảng    78 phút | XONG Khen/chê theo cặp, seed 0: acc test 0.901
+[15:54:24] tổng  91.9% | còn khoảng    78 phút | BẮT ĐẦU Khen/chê theo cặp, seed 1
+[15:54:47] tổng  92.4% | còn khoảng    73 phút | Khen/chê theo cặp, seed 1 epoch 1/5: batch 50, loss 0.393
+[15:54:57] tổng  92.6% | còn khoảng    71 phút | Khen/chê theo cặp, seed 1 xong epoch 1/5: điểm dev 0.9923
+[15:55:19] tổng  93.1% | còn khoảng    66 phút | Khen/chê theo cặp, seed 1 epoch 2/5: batch 50, loss 0.197
+[15:55:29] tổng  93.2% | còn khoảng    64 phút | Khen/chê theo cặp, seed 1 xong epoch 2/5: điểm dev 0.9921
+[15:55:51] tổng  93.7% | còn khoảng    59 phút | Khen/chê theo cặp, seed 1 epoch 3/5: batch 50, loss 0.128
+[15:56:01] tổng  93.9% | còn khoảng    57 phút | Khen/chê theo cặp, seed 1 xong epoch 3/5: điểm dev 0.9936
+[15:56:23] tổng  94.4% | còn khoảng    53 phút | Khen/chê theo cặp, seed 1 epoch 4/5: batch 50, loss 0.082
+[15:56:33] tổng  94.6% | còn khoảng    51 phút | Khen/chê theo cặp, seed 1 xong epoch 4/5: điểm dev 0.9930
+[15:56:55] tổng  95.1% | còn khoảng    46 phút | Khen/chê theo cặp, seed 1 epoch 5/5: batch 50, loss 0.057
+[15:57:05] tổng  95.3% | còn khoảng    44 phút | Khen/chê theo cặp, seed 1 xong epoch 5/5: điểm dev 0.9935
+[15:57:08] tổng  95.3% | còn khoảng    44 phút | XONG Khen/chê theo cặp, seed 1: acc test 0.899
+[15:57:09] tổng  95.3% | còn khoảng    44 phút | BẮT ĐẦU Khen/chê theo cặp, seed 2
+[15:57:32] tổng  95.8% | còn khoảng    39 phút | Khen/chê theo cặp, seed 2 epoch 1/5: batch 50, loss 0.421
+[15:57:42] tổng  96.0% | còn khoảng    37 phút | Khen/chê theo cặp, seed 2 xong epoch 1/5: điểm dev 0.9903
+[15:58:04] tổng  96.5% | còn khoảng    33 phút | Khen/chê theo cặp, seed 2 epoch 2/5: batch 50, loss 0.187
+[15:58:14] tổng  96.7% | còn khoảng    31 phút | Khen/chê theo cặp, seed 2 xong epoch 2/5: điểm dev 0.9925
+[15:58:36] tổng  97.1% | còn khoảng    26 phút | Khen/chê theo cặp, seed 2 epoch 3/5: batch 50, loss 0.121
+[15:58:46] tổng  97.3% | còn khoảng    24 phút | Khen/chê theo cặp, seed 2 xong epoch 3/5: điểm dev 0.9946
+[15:59:08] tổng  97.8% | còn khoảng    20 phút | Khen/chê theo cặp, seed 2 epoch 4/5: batch 50, loss 0.068
+[15:59:18] tổng  98.0% | còn khoảng    18 phút | Khen/chê theo cặp, seed 2 xong epoch 4/5: điểm dev 0.9925
+[15:59:39] tổng  98.5% | còn khoảng    13 phút | Khen/chê theo cặp, seed 2 epoch 5/5: batch 50, loss 0.056
+[15:59:49] tổng  98.7% | còn khoảng    12 phút | Khen/chê theo cặp, seed 2 xong epoch 5/5: điểm dev 0.9930
+[15:59:53] tổng  98.7% | còn khoảng    12 phút | XONG Khen/chê theo cặp, seed 2: acc test 0.881
+[15:59:53] tổng  98.7% | còn khoảng    12 phút | Chấm toàn bộ cặp câu x khía cạnh trên 500 câu test
+[16:00:26] tổng  98.7% | còn khoảng    12 phút | Đầu ra theo game: nhận khía cạnh 33025 câu
+[16:04:48] tổng  98.7% | còn khoảng    12 phút | Đầu ra theo game: chấm khen/chê 32075 cặp
+[16:09:03] tổng 100.0% | còn khoảng     0 phút | HOÀN TẤT toàn bộ notebook

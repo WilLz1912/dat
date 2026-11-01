@@ -1,0 +1,239 @@
+[16:18:18] tổng   0.0% | còn khoảng   nan phút | BẮT ĐẦU Đường cong 25%, seed 0
+[16:18:32] tổng   0.3% | còn khoảng    88 phút | Đường cong 25%, seed 0 xong epoch 1/6: điểm dev 0.0000
+[16:18:42] tổng   0.5% | còn khoảng    77 phút | Đường cong 25%, seed 0 xong epoch 2/6: điểm dev 0.0000
+[16:18:52] tổng   0.8% | còn khoảng    73 phút | Đường cong 25%, seed 0 xong epoch 3/6: điểm dev 0.1322
+[16:19:03] tổng   1.0% | còn khoảng    71 phút | Đường cong 25%, seed 0 xong epoch 4/6: điểm dev 0.2047
+[16:19:13] tổng   1.3% | còn khoảng    69 phút | Đường cong 25%, seed 0 xong epoch 5/6: điểm dev 0.2500
+[16:19:23] tổng   1.6% | còn khoảng    69 phút | Đường cong 25%, seed 0 xong epoch 6/6: điểm dev 0.2609
+[16:19:29] tổng   1.6% | còn khoảng    75 phút | XONG đường cong 25%, seed 0: F1 test 0.433
+[16:19:29] tổng   1.6% | còn khoảng    75 phút | BẮT ĐẦU Đường cong 25%, seed 1
+[16:19:41] tổng   1.8% | còn khoảng    75 phút | Đường cong 25%, seed 1 xong epoch 1/6: điểm dev 0.0000
+[16:19:51] tổng   2.1% | còn khoảng    73 phút | Đường cong 25%, seed 1 xong epoch 2/6: điểm dev 0.0000
+[16:20:01] tổng   2.3% | còn khoảng    72 phút | Đường cong 25%, seed 1 xong epoch 3/6: điểm dev 0.2920
+[16:20:12] tổng   2.6% | còn khoảng    71 phút | Đường cong 25%, seed 1 xong epoch 4/6: điểm dev 0.3949
+[16:20:22] tổng   2.8% | còn khoảng    70 phút | Đường cong 25%, seed 1 xong epoch 5/6: điểm dev 0.3733
+[16:20:32] tổng   3.1% | còn khoảng    69 phút | Đường cong 25%, seed 1 xong epoch 6/6: điểm dev 0.3733
+[16:20:38] tổng   3.1% | còn khoảng    72 phút | XONG đường cong 25%, seed 1: F1 test 0.452
+[16:20:38] tổng   3.1% | còn khoảng    72 phút | BẮT ĐẦU Đường cong 50%, seed 0
+[16:20:58] tổng   3.6% | còn khoảng    71 phút | Đường cong 50%, seed 0 xong epoch 1/6: điểm dev 0.1890
+[16:21:16] tổng   4.1% | còn khoảng    69 phút | Đường cong 50%, seed 0 xong epoch 2/6: điểm dev 0.3043
+[16:21:35] tổng   4.7% | còn khoảng    67 phút | Đường cong 50%, seed 0 xong epoch 3/6: điểm dev 0.3896
+[16:21:54] tổng   5.2% | còn khoảng    66 phút | Đường cong 50%, seed 0 xong epoch 4/6: điểm dev 0.5057
+[16:22:12] tổng   5.7% | còn khoảng    65 phút | Đường cong 50%, seed 0 xong epoch 5/6: điểm dev 0.5140
+[16:22:31] tổng   6.2% | còn khoảng    64 phút | Đường cong 50%, seed 0 xong epoch 6/6: điểm dev 0.5444
+[16:22:37] tổng   6.2% | còn khoảng    65 phút | XONG đường cong 50%, seed 0: F1 test 0.565
+[16:22:37] tổng   6.2% | còn khoảng    65 phút | BẮT ĐẦU Đường cong 50%, seed 1
+[16:22:57] tổng   6.7% | còn khoảng    64 phút | Đường cong 50%, seed 1 xong epoch 1/6: điểm dev 0.0000
+[16:23:16] tổng   7.2% | còn khoảng    63 phút | Đường cong 50%, seed 1 xong epoch 2/6: điểm dev 0.2609
+[16:23:35] tổng   7.8% | còn khoảng    63 phút | Đường cong 50%, seed 1 xong epoch 3/6: điểm dev 0.5172
+[16:23:54] tổng   8.3% | còn khoảng    62 phút | Đường cong 50%, seed 1 xong epoch 4/6: điểm dev 0.4970
+[16:24:12] tổng   8.8% | còn khoảng    61 phút | Đường cong 50%, seed 1 xong epoch 5/6: điểm dev 0.5574
+[16:24:31] tổng   9.3% | còn khoảng    60 phút | Đường cong 50%, seed 1 xong epoch 6/6: điểm dev 0.5668
+[16:24:37] tổng   9.3% | còn khoảng    61 phút | XONG đường cong 50%, seed 1: F1 test 0.568
+[16:24:37] tổng   9.3% | còn khoảng    61 phút | BẮT ĐẦU Đường cong 75%, seed 0
+[16:25:00] tổng  10.0% | còn khoảng    60 phút | Đường cong 75%, seed 0 epoch 1/6: batch 50, loss 0.463
+[16:25:05] tổng  10.1% | còn khoảng    60 phút | Đường cong 75%, seed 0 xong epoch 1/6: điểm dev 0.0175
+[16:25:27] tổng  10.8% | còn khoảng    59 phút | Đường cong 75%, seed 0 epoch 2/6: batch 50, loss 0.267
+[16:25:32] tổng  10.9% | còn khoảng    59 phút | Đường cong 75%, seed 0 xong epoch 2/6: điểm dev 0.4596
+[16:25:54] tổng  11.5% | còn khoảng    58 phút | Đường cong 75%, seed 0 epoch 3/6: batch 50, loss 0.170
+[16:25:59] tổng  11.6% | còn khoảng    58 phút | Đường cong 75%, seed 0 xong epoch 3/6: điểm dev 0.5349
+[16:26:21] tổng  12.3% | còn khoảng    57 phút | Đường cong 75%, seed 0 epoch 4/6: batch 50, loss 0.104
+[16:26:26] tổng  12.4% | còn khoảng    57 phút | Đường cong 75%, seed 0 xong epoch 4/6: điểm dev 0.6138
+[16:26:48] tổng  13.1% | còn khoảng    56 phút | Đường cong 75%, seed 0 epoch 5/6: batch 50, loss 0.076
+[16:26:53] tổng  13.2% | còn khoảng    56 phút | Đường cong 75%, seed 0 xong epoch 5/6: điểm dev 0.6122
+[16:27:15] tổng  13.9% | còn khoảng    56 phút | Đường cong 75%, seed 0 epoch 6/6: batch 50, loss 0.059
+[16:27:20] tổng  14.0% | còn khoảng    56 phút | Đường cong 75%, seed 0 xong epoch 6/6: điểm dev 0.6146
+[16:27:26] tổng  14.0% | còn khoảng    56 phút | XONG đường cong 75%, seed 0: F1 test 0.605
+[16:27:26] tổng  14.0% | còn khoảng    56 phút | BẮT ĐẦU Đường cong 75%, seed 1
+[16:27:49] tổng  14.6% | còn khoảng    55 phút | Đường cong 75%, seed 1 epoch 1/6: batch 50, loss 0.461
+[16:27:55] tổng  14.8% | còn khoảng    55 phút | Đường cong 75%, seed 1 xong epoch 1/6: điểm dev 0.0513
+[16:28:16] tổng  15.4% | còn khoảng    55 phút | Đường cong 75%, seed 1 epoch 2/6: batch 50, loss 0.250
+[16:28:22] tổng  15.5% | còn khoảng    55 phút | Đường cong 75%, seed 1 xong epoch 2/6: điểm dev 0.4286
+[16:28:43] tổng  16.2% | còn khoảng    54 phút | Đường cong 75%, seed 1 epoch 3/6: batch 50, loss 0.164
+[16:28:48] tổng  16.3% | còn khoảng    54 phút | Đường cong 75%, seed 1 xong epoch 3/6: điểm dev 0.5455
+[16:29:10] tổng  17.0% | còn khoảng    53 phút | Đường cong 75%, seed 1 epoch 4/6: batch 50, loss 0.109
+[16:29:15] tổng  17.1% | còn khoảng    53 phút | Đường cong 75%, seed 1 xong epoch 4/6: điểm dev 0.5979
+[16:29:37] tổng  17.7% | còn khoảng    52 phút | Đường cong 75%, seed 1 epoch 5/6: batch 50, loss 0.082
+[16:29:42] tổng  17.9% | còn khoảng    52 phút | Đường cong 75%, seed 1 xong epoch 5/6: điểm dev 0.6064
+[16:30:04] tổng  18.5% | còn khoảng    52 phút | Đường cong 75%, seed 1 epoch 6/6: batch 50, loss 0.067
+[16:30:10] tổng  18.6% | còn khoảng    52 phút | Đường cong 75%, seed 1 xong epoch 6/6: điểm dev 0.6146
+[16:30:16] tổng  18.6% | còn khoảng    52 phút | XONG đường cong 75%, seed 1: F1 test 0.559
+[16:30:16] tổng  18.6% | còn khoảng    52 phút | BẮT ĐẦU Đường cong 100%, seed 0
+[16:30:39] tổng  19.3% | còn khoảng    52 phút | Đường cong 100%, seed 0 epoch 1/6: batch 50, loss 0.473
+[16:30:53] tổng  19.7% | còn khoảng    51 phút | Đường cong 100%, seed 0 xong epoch 1/6: điểm dev 0.2154
+[16:31:14] tổng  20.3% | còn khoảng    51 phút | Đường cong 100%, seed 0 epoch 2/6: batch 50, loss 0.249
+[16:31:28] tổng  20.7% | còn khoảng    50 phút | Đường cong 100%, seed 0 xong epoch 2/6: điểm dev 0.4744
+[16:31:50] tổng  21.4% | còn khoảng    50 phút | Đường cong 100%, seed 0 epoch 3/6: batch 50, loss 0.153
+[16:32:03] tổng  21.7% | còn khoảng    50 phút | Đường cong 100%, seed 0 xong epoch 3/6: điểm dev 0.6224
+[16:32:25] tổng  22.4% | còn khoảng    49 phút | Đường cong 100%, seed 0 epoch 4/6: batch 50, loss 0.100
+[16:32:39] tổng  22.8% | còn khoảng    49 phút | Đường cong 100%, seed 0 xong epoch 4/6: điểm dev 0.6211
+[16:33:01] tổng  23.4% | còn khoảng    48 phút | Đường cong 100%, seed 0 epoch 5/6: batch 50, loss 0.066
+[16:33:14] tổng  23.8% | còn khoảng    48 phút | Đường cong 100%, seed 0 xong epoch 5/6: điểm dev 0.6269
+[16:33:36] tổng  24.5% | còn khoảng    47 phút | Đường cong 100%, seed 0 epoch 6/6: batch 50, loss 0.052
+[16:33:51] tổng  24.8% | còn khoảng    47 phút | Đường cong 100%, seed 0 xong epoch 6/6: điểm dev 0.6263
+[16:33:57] tổng  24.8% | còn khoảng    47 phút | XONG đường cong 100%, seed 0: F1 test 0.61
+[16:33:57] tổng  24.8% | còn khoảng    47 phút | BẮT ĐẦU Đường cong 100%, seed 1
+[16:34:20] tổng  25.5% | còn khoảng    47 phút | Đường cong 100%, seed 1 epoch 1/6: batch 50, loss 0.490
+[16:34:34] tổng  25.9% | còn khoảng    47 phút | Đường cong 100%, seed 1 xong epoch 1/6: điểm dev 0.3636
+[16:34:55] tổng  26.5% | còn khoảng    46 phút | Đường cong 100%, seed 1 epoch 2/6: batch 50, loss 0.239
+[16:35:09] tổng  26.9% | còn khoảng    46 phút | Đường cong 100%, seed 1 xong epoch 2/6: điểm dev 0.5202
+[16:35:31] tổng  27.6% | còn khoảng    45 phút | Đường cong 100%, seed 1 epoch 3/6: batch 50, loss 0.142
+[16:35:45] tổng  28.0% | còn khoảng    45 phút | Đường cong 100%, seed 1 xong epoch 3/6: điểm dev 0.5668
+[16:36:07] tổng  28.6% | còn khoảng    44 phút | Đường cong 100%, seed 1 epoch 4/6: batch 50, loss 0.092
+[16:36:20] tổng  29.0% | còn khoảng    44 phút | Đường cong 100%, seed 1 xong epoch 4/6: điểm dev 0.5820
+[16:36:42] tổng  29.6% | còn khoảng    44 phút | Đường cong 100%, seed 1 epoch 5/6: batch 50, loss 0.065
+[16:36:56] tổng  30.0% | còn khoảng    43 phút | Đường cong 100%, seed 1 xong epoch 5/6: điểm dev 0.6256
+[16:37:17] tổng  30.7% | còn khoảng    43 phút | Đường cong 100%, seed 1 epoch 6/6: batch 50, loss 0.049
+[16:37:31] tổng  31.1% | còn khoảng    43 phút | Đường cong 100%, seed 1 xong epoch 6/6: điểm dev 0.6020
+[16:37:37] tổng  31.1% | còn khoảng    43 phút | XONG đường cong 100%, seed 1: F1 test 0.607
+[16:37:37] tổng  31.1% | còn khoảng    43 phút | BẮT ĐẦU Đường cong 100%, seed 2
+[16:38:00] tổng  31.7% | còn khoảng    42 phút | Đường cong 100%, seed 2 epoch 1/6: batch 50, loss 0.473
+[16:38:14] tổng  32.1% | còn khoảng    42 phút | Đường cong 100%, seed 2 xong epoch 1/6: điểm dev 0.3088
+[16:38:36] tổng  32.8% | còn khoảng    42 phút | Đường cong 100%, seed 2 epoch 2/6: batch 50, loss 0.222
+[16:38:49] tổng  33.1% | còn khoảng    41 phút | Đường cong 100%, seed 2 xong epoch 2/6: điểm dev 0.5979
+[16:39:11] tổng  33.8% | còn khoảng    41 phút | Đường cong 100%, seed 2 epoch 3/6: batch 50, loss 0.143
+[16:39:25] tổng  34.2% | còn khoảng    41 phút | Đường cong 100%, seed 2 xong epoch 3/6: điểm dev 0.5846
+[16:39:47] tổng  34.8% | còn khoảng    40 phút | Đường cong 100%, seed 2 epoch 4/6: batch 50, loss 0.085
+[16:40:00] tổng  35.2% | còn khoảng    40 phút | Đường cong 100%, seed 2 xong epoch 4/6: điểm dev 0.6049
+[16:40:22] tổng  35.9% | còn khoảng    39 phút | Đường cong 100%, seed 2 epoch 5/6: batch 50, loss 0.063
+[16:40:36] tổng  36.2% | còn khoảng    39 phút | Đường cong 100%, seed 2 xong epoch 5/6: điểm dev 0.6200
+[16:40:57] tổng  36.9% | còn khoảng    39 phút | Đường cong 100%, seed 2 epoch 6/6: batch 50, loss 0.047
+[16:41:11] tổng  37.3% | còn khoảng    39 phút | Đường cong 100%, seed 2 xong epoch 6/6: điểm dev 0.6280
+[16:41:17] tổng  37.3% | còn khoảng    39 phút | XONG đường cong 100%, seed 2: F1 test 0.634
+[16:41:17] tổng  37.3% | còn khoảng    39 phút | BẮT ĐẦU Từ khoá trong đầu vào, seed 0
+[16:41:41] tổng  37.9% | còn khoảng    38 phút | Từ khoá trong đầu vào, seed 0 epoch 1/6: batch 50, loss 0.468
+[16:41:54] tổng  38.3% | còn khoảng    38 phút | Từ khoá trong đầu vào, seed 0 xong epoch 1/6: điểm dev 0.3239
+[16:42:16] tổng  39.0% | còn khoảng    38 phút | Từ khoá trong đầu vào, seed 0 epoch 2/6: batch 50, loss 0.208
+[16:42:30] tổng  39.3% | còn khoảng    37 phút | Từ khoá trong đầu vào, seed 0 xong epoch 2/6: điểm dev 0.5652
+[16:42:51] tổng  40.0% | còn khoảng    37 phút | Từ khoá trong đầu vào, seed 0 epoch 3/6: batch 50, loss 0.139
+[16:43:05] tổng  40.4% | còn khoảng    37 phút | Từ khoá trong đầu vào, seed 0 xong epoch 3/6: điểm dev 0.6105
+[16:43:27] tổng  41.0% | còn khoảng    36 phút | Từ khoá trong đầu vào, seed 0 epoch 4/6: batch 50, loss 0.099
+[16:43:41] tổng  41.4% | còn khoảng    36 phút | Từ khoá trong đầu vào, seed 0 xong epoch 4/6: điểm dev 0.6186
+[16:44:03] tổng  42.1% | còn khoảng    35 phút | Từ khoá trong đầu vào, seed 0 epoch 5/6: batch 50, loss 0.066
+[16:44:17] tổng  42.4% | còn khoảng    35 phút | Từ khoá trong đầu vào, seed 0 xong epoch 5/6: điểm dev 0.6633
+[16:44:38] tổng  43.1% | còn khoảng    35 phút | Từ khoá trong đầu vào, seed 0 epoch 6/6: batch 50, loss 0.052
+[16:44:52] tổng  43.5% | còn khoảng    35 phút | Từ khoá trong đầu vào, seed 0 xong epoch 6/6: điểm dev 0.6566
+[16:44:58] tổng  43.5% | còn khoảng    35 phút | XONG từ khoá trong đầu vào, seed 0
+[16:44:58] tổng  43.5% | còn khoảng    35 phút | BẮT ĐẦU Từ khoá trong đầu vào, seed 1
+[16:45:21] tổng  44.1% | còn khoảng    34 phút | Từ khoá trong đầu vào, seed 1 epoch 1/6: batch 50, loss 0.485
+[16:45:35] tổng  44.5% | còn khoảng    34 phút | Từ khoá trong đầu vào, seed 1 xong epoch 1/6: điểm dev 0.4364
+[16:45:56] tổng  45.2% | còn khoảng    34 phút | Từ khoá trong đầu vào, seed 1 epoch 2/6: batch 50, loss 0.201
+[16:46:10] tổng  45.5% | còn khoảng    33 phút | Từ khoá trong đầu vào, seed 1 xong epoch 2/6: điểm dev 0.6188
+[16:46:32] tổng  46.2% | còn khoảng    33 phút | Từ khoá trong đầu vào, seed 1 epoch 3/6: batch 50, loss 0.134
+[16:46:46] tổng  46.6% | còn khoảng    33 phút | Từ khoá trong đầu vào, seed 1 xong epoch 3/6: điểm dev 0.6765
+[16:47:08] tổng  47.2% | còn khoảng    32 phút | Từ khoá trong đầu vào, seed 1 epoch 4/6: batch 50, loss 0.097
+[16:47:21] tổng  47.6% | còn khoảng    32 phút | Từ khoá trong đầu vào, seed 1 xong epoch 4/6: điểm dev 0.6601
+[16:47:43] tổng  48.3% | còn khoảng    32 phút | Từ khoá trong đầu vào, seed 1 epoch 5/6: batch 50, loss 0.069
+[16:47:56] tổng  48.7% | còn khoảng    31 phút | Từ khoá trong đầu vào, seed 1 xong epoch 5/6: điểm dev 0.6732
+[16:48:18] tổng  49.3% | còn khoảng    31 phút | Từ khoá trong đầu vào, seed 1 epoch 6/6: batch 50, loss 0.056
+[16:48:32] tổng  49.7% | còn khoảng    31 phút | Từ khoá trong đầu vào, seed 1 xong epoch 6/6: điểm dev 0.6634
+[16:48:38] tổng  49.7% | còn khoảng    31 phút | XONG từ khoá trong đầu vào, seed 1
+[16:48:38] tổng  49.7% | còn khoảng    31 phút | BẮT ĐẦU Từ khoá trong đầu vào, seed 2
+[16:49:01] tổng  50.3% | còn khoảng    30 phút | Từ khoá trong đầu vào, seed 2 epoch 1/6: batch 50, loss 0.468
+[16:49:14] tổng  50.7% | còn khoảng    30 phút | Từ khoá trong đầu vào, seed 2 xong epoch 1/6: điểm dev 0.4403
+[16:49:36] tổng  51.4% | còn khoảng    30 phút | Từ khoá trong đầu vào, seed 2 epoch 2/6: batch 50, loss 0.191
+[16:49:50] tổng  51.8% | còn khoảng    29 phút | Từ khoá trong đầu vào, seed 2 xong epoch 2/6: điểm dev 0.6573
+[16:50:12] tổng  52.4% | còn khoảng    29 phút | Từ khoá trong đầu vào, seed 2 epoch 3/6: batch 50, loss 0.136
+[16:50:25] tổng  52.8% | còn khoảng    29 phút | Từ khoá trong đầu vào, seed 2 xong epoch 3/6: điểm dev 0.6599
+[16:50:47] tổng  53.5% | còn khoảng    28 phút | Từ khoá trong đầu vào, seed 2 epoch 4/6: batch 50, loss 0.087
+[16:51:01] tổng  53.8% | còn khoảng    28 phút | Từ khoá trong đầu vào, seed 2 xong epoch 4/6: điểm dev 0.6533
+[16:51:23] tổng  54.5% | còn khoảng    28 phút | Từ khoá trong đầu vào, seed 2 epoch 5/6: batch 50, loss 0.067
+[16:51:36] tổng  54.9% | còn khoảng    27 phút | Từ khoá trong đầu vào, seed 2 xong epoch 5/6: điểm dev 0.6562
+[16:51:58] tổng  55.5% | còn khoảng    27 phút | Từ khoá trong đầu vào, seed 2 epoch 6/6: batch 50, loss 0.051
+[16:52:12] tổng  55.9% | còn khoảng    27 phút | Từ khoá trong đầu vào, seed 2 xong epoch 6/6: điểm dev 0.6500
+[16:52:17] tổng  55.9% | còn khoảng    27 phút | XONG từ khoá trong đầu vào, seed 2
+[16:52:18] tổng  55.9% | còn khoảng    27 phút | BẮT ĐẦU khen/chê nhãn Steam, bỏ review của câu dev
+[16:52:41] tổng  56.6% | còn khoảng    26 phút | Khen/chê sạch epoch 1/3: batch 50, loss 0.699
+[16:53:03] tổng  57.2% | còn khoảng    26 phút | Khen/chê sạch epoch 1/3: batch 100, loss 0.651
+[16:53:24] tổng  57.9% | còn khoảng    26 phút | Khen/chê sạch epoch 1/3: batch 150, loss 0.599
+[16:53:46] tổng  58.5% | còn khoảng    25 phút | Khen/chê sạch epoch 1/3: batch 200, loss 0.551
+[16:54:07] tổng  59.1% | còn khoảng    25 phút | Khen/chê sạch epoch 1/3: batch 250, loss 0.527
+[16:54:28] tổng  59.8% | còn khoảng    24 phút | Khen/chê sạch epoch 1/3: batch 300, loss 0.513
+[16:54:49] tổng  60.4% | còn khoảng    24 phút | Khen/chê sạch epoch 1/3: batch 350, loss 0.495
+[16:55:11] tổng  61.1% | còn khoảng    23 phút | Khen/chê sạch epoch 1/3: batch 400, loss 0.469
+[16:55:32] tổng  61.4% | còn khoảng    23 phút | Khen/chê sạch xong epoch 1/3: điểm dev 0.9242
+[16:55:54] tổng  62.1% | còn khoảng    23 phút | Khen/chê sạch epoch 2/3: batch 50, loss 0.274
+[16:56:15] tổng  62.7% | còn khoảng    23 phút | Khen/chê sạch epoch 2/3: batch 100, loss 0.289
+[16:56:36] tổng  63.4% | còn khoảng    22 phút | Khen/chê sạch epoch 2/3: batch 150, loss 0.276
+[16:56:58] tổng  64.0% | còn khoảng    22 phút | Khen/chê sạch epoch 2/3: batch 200, loss 0.267
+[16:57:19] tổng  64.7% | còn khoảng    21 phút | Khen/chê sạch epoch 2/3: batch 250, loss 0.270
+[16:57:40] tổng  65.3% | còn khoảng    21 phút | Khen/chê sạch epoch 2/3: batch 300, loss 0.270
+[16:58:01] tổng  66.0% | còn khoảng    20 phút | Khen/chê sạch epoch 2/3: batch 350, loss 0.273
+[16:58:22] tổng  66.6% | còn khoảng    20 phút | Khen/chê sạch epoch 2/3: batch 400, loss 0.271
+[16:58:44] tổng  66.9% | còn khoảng    20 phút | Khen/chê sạch xong epoch 2/3: điểm dev 0.9321
+[16:59:06] tổng  67.6% | còn khoảng    20 phút | Khen/chê sạch epoch 3/3: batch 50, loss 0.144
+[16:59:27] tổng  68.2% | còn khoảng    19 phút | Khen/chê sạch epoch 3/3: batch 100, loss 0.156
+[16:59:48] tổng  68.9% | còn khoảng    19 phút | Khen/chê sạch epoch 3/3: batch 150, loss 0.162
+[17:00:10] tổng  69.5% | còn khoảng    18 phút | Khen/chê sạch epoch 3/3: batch 200, loss 0.166
+[17:00:31] tổng  70.2% | còn khoảng    18 phút | Khen/chê sạch epoch 3/3: batch 250, loss 0.169
+[17:00:52] tổng  70.8% | còn khoảng    18 phút | Khen/chê sạch epoch 3/3: batch 300, loss 0.168
+[17:01:13] tổng  71.5% | còn khoảng    17 phút | Khen/chê sạch epoch 3/3: batch 350, loss 0.172
+[17:01:35] tổng  72.1% | còn khoảng    17 phút | Khen/chê sạch epoch 3/3: batch 400, loss 0.168
+[17:01:56] tổng  72.4% | còn khoảng    17 phút | Khen/chê sạch xong epoch 3/3: điểm dev 0.9317
+[17:02:12] tổng  72.4% | còn khoảng    17 phút | BẮT ĐẦU theo cặp: Khởi tạo nhãn Steam, đã sửa rò rỉ, seed 0
+[17:02:36] tổng  73.1% | còn khoảng    16 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 0 epoch 1/5: batch 50, loss 0.282
+[17:02:46] tổng  73.4% | còn khoảng    16 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 0 xong epoch 1/5: điểm dev 0.9888
+[17:03:08] tổng  74.0% | còn khoảng    16 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 0 epoch 2/5: batch 50, loss 0.183
+[17:03:18] tổng  74.3% | còn khoảng    16 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 0 xong epoch 2/5: điểm dev 0.9906
+[17:03:40] tổng  74.9% | còn khoảng    15 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 0 epoch 3/5: batch 50, loss 0.108
+[17:03:51] tổng  75.2% | còn khoảng    15 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 0 xong epoch 3/5: điểm dev 0.9920
+[17:04:12] tổng  75.9% | còn khoảng    15 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 0 epoch 4/5: batch 50, loss 0.069
+[17:04:22] tổng  76.1% | còn khoảng    14 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 0 xong epoch 4/5: điểm dev 0.9887
+[17:04:44] tổng  76.8% | còn khoảng    14 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 0 epoch 5/5: batch 50, loss 0.051
+[17:04:54] tổng  77.0% | còn khoảng    14 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 0 xong epoch 5/5: điểm dev 0.9896
+[17:04:58] tổng  77.0% | còn khoảng    14 phút | BẮT ĐẦU theo cặp: Khởi tạo nhãn Steam, đã sửa rò rỉ, seed 1
+[17:05:22] tổng  77.7% | còn khoảng    14 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 1 epoch 1/5: batch 50, loss 0.393
+[17:05:32] tổng  78.0% | còn khoảng    13 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 1 xong epoch 1/5: điểm dev 0.9896
+[17:05:53] tổng  78.6% | còn khoảng    13 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 1 epoch 2/5: batch 50, loss 0.191
+[17:06:04] tổng  78.9% | còn khoảng    13 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 1 xong epoch 2/5: điểm dev 0.9914
+[17:06:25] tổng  79.5% | còn khoảng    12 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 1 epoch 3/5: batch 50, loss 0.124
+[17:06:35] tổng  79.8% | còn khoảng    12 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 1 xong epoch 3/5: điểm dev 0.9927
+[17:06:57] tổng  80.4% | còn khoảng    12 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 1 epoch 4/5: batch 50, loss 0.084
+[17:07:07] tổng  80.7% | còn khoảng    12 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 1 xong epoch 4/5: điểm dev 0.9912
+[17:07:29] tổng  81.4% | còn khoảng    11 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 1 epoch 5/5: batch 50, loss 0.057
+[17:07:39] tổng  81.6% | còn khoảng    11 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 1 xong epoch 5/5: điểm dev 0.9919
+[17:07:43] tổng  81.6% | còn khoảng    11 phút | BẮT ĐẦU theo cặp: Khởi tạo nhãn Steam, đã sửa rò rỉ, seed 2
+[17:08:06] tổng  82.3% | còn khoảng    11 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 2 epoch 1/5: batch 50, loss 0.425
+[17:08:17] tổng  82.5% | còn khoảng    11 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 2 xong epoch 1/5: điểm dev 0.9908
+[17:08:38] tổng  83.2% | còn khoảng    10 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 2 epoch 2/5: batch 50, loss 0.183
+[17:08:49] tổng  83.5% | còn khoảng    10 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 2 xong epoch 2/5: điểm dev 0.9917
+[17:09:10] tổng  84.1% | còn khoảng    10 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 2 epoch 3/5: batch 50, loss 0.119
+[17:09:20] tổng  84.4% | còn khoảng     9 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 2 xong epoch 3/5: điểm dev 0.9939
+[17:09:42] tổng  85.0% | còn khoảng     9 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 2 epoch 4/5: batch 50, loss 0.067
+[17:09:52] tổng  85.3% | còn khoảng     9 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 2 xong epoch 4/5: điểm dev 0.9918
+[17:10:14] tổng  86.0% | còn khoảng     8 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 2 epoch 5/5: batch 50, loss 0.060
+[17:10:24] tổng  86.2% | còn khoảng     8 phút | Theo cặp (Khởi tạo nhãn Steam, đã sửa rò rỉ), seed 2 xong epoch 5/5: điểm dev 0.9916
+[17:10:28] tổng  86.2% | còn khoảng     8 phút | BẮT ĐẦU theo cặp: Khởi tạo DistilBERT gốc, seed 0
+[17:10:51] tổng  86.9% | còn khoảng     8 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 0 epoch 1/5: batch 50, loss 0.604
+[17:11:01] tổng  87.1% | còn khoảng     8 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 0 xong epoch 1/5: điểm dev 0.9477
+[17:11:24] tổng  87.8% | còn khoảng     7 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 0 epoch 2/5: batch 50, loss 0.288
+[17:11:34] tổng  88.1% | còn khoảng     7 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 0 xong epoch 2/5: điểm dev 0.9788
+[17:11:55] tổng  88.7% | còn khoảng     7 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 0 epoch 3/5: batch 50, loss 0.163
+[17:12:06] tổng  89.0% | còn khoảng     7 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 0 xong epoch 3/5: điểm dev 0.9836
+[17:12:27] tổng  89.6% | còn khoảng     6 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 0 epoch 4/5: batch 50, loss 0.115
+[17:12:38] tổng  89.9% | còn khoảng     6 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 0 xong epoch 4/5: điểm dev 0.9834
+[17:12:59] tổng  90.6% | còn khoảng     6 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 0 epoch 5/5: batch 50, loss 0.076
+[17:13:09] tổng  90.8% | còn khoảng     6 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 0 xong epoch 5/5: điểm dev 0.9847
+[17:13:13] tổng  90.8% | còn khoảng     6 phút | BẮT ĐẦU theo cặp: Khởi tạo DistilBERT gốc, seed 1
+[17:13:37] tổng  91.5% | còn khoảng     5 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 1 epoch 1/5: batch 50, loss 0.565
+[17:13:47] tổng  91.7% | còn khoảng     5 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 1 xong epoch 1/5: điểm dev 0.9824
+[17:14:09] tổng  92.4% | còn khoảng     5 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 1 epoch 2/5: batch 50, loss 0.273
+[17:14:19] tổng  92.7% | còn khoảng     4 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 1 xong epoch 2/5: điểm dev 0.9830
+[17:14:41] tổng  93.3% | còn khoảng     4 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 1 epoch 3/5: batch 50, loss 0.164
+[17:14:51] tổng  93.6% | còn khoảng     4 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 1 xong epoch 3/5: điểm dev 0.9867
+[17:15:13] tổng  94.2% | còn khoảng     3 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 1 epoch 4/5: batch 50, loss 0.110
+[17:15:23] tổng  94.5% | còn khoảng     3 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 1 xong epoch 4/5: điểm dev 0.9844
+[17:15:45] tổng  95.1% | còn khoảng     3 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 1 epoch 5/5: batch 50, loss 0.074
+[17:15:55] tổng  95.4% | còn khoảng     3 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 1 xong epoch 5/5: điểm dev 0.9855
+[17:15:59] tổng  95.4% | còn khoảng     3 phút | BẮT ĐẦU theo cặp: Khởi tạo DistilBERT gốc, seed 2
+[17:16:22] tổng  96.1% | còn khoảng     2 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 2 epoch 1/5: batch 50, loss 0.606
+[17:16:32] tổng  96.3% | còn khoảng     2 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 2 xong epoch 1/5: điểm dev 0.9809
+[17:16:54] tổng  97.0% | còn khoảng     2 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 2 epoch 2/5: batch 50, loss 0.254
+[17:17:04] tổng  97.2% | còn khoảng     2 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 2 xong epoch 2/5: điểm dev 0.9890
+[17:17:26] tổng  97.9% | còn khoảng     1 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 2 epoch 3/5: batch 50, loss 0.145
+[17:17:36] tổng  98.2% | còn khoảng     1 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 2 xong epoch 3/5: điểm dev 0.9909
+[17:17:58] tổng  98.8% | còn khoảng     1 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 2 epoch 4/5: batch 50, loss 0.075
+[17:18:08] tổng  99.1% | còn khoảng     1 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 2 xong epoch 4/5: điểm dev 0.9874
+[17:18:30] tổng  99.7% | còn khoảng     0 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 2 epoch 5/5: batch 50, loss 0.072
+[17:18:40] tổng 100.0% | còn khoảng     0 phút | Theo cặp (Khởi tạo DistilBERT gốc), seed 2 xong epoch 5/5: điểm dev 0.9892
+[17:20:24] tổng 100.0% | còn khoảng     0 phút | HOÀN TẤT lần chạy 2

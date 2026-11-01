@@ -1,0 +1,9 @@
+,số câu thật,Từ khoá,TF-IDF + LR,DistilBERT (+ câu trái cảm xúc),Từ khoá trong đầu vào (+ toàn bộ train 2)
+Đồ hoạ,21,0.63,0.38,0.64,0.62
+Âm thanh,3,0.57,0.5,0.8,0.8
+Gameplay,233,0.47,0.59,0.71,0.71
+Cốt truyện,38,0.69,0.69,0.79,0.76
+"Hiệu năng, lỗi",114,0.66,0.6,0.75,0.77
+"Giá, trả phí",60,0.69,0.65,0.7,0.7
+"Online, cộng đồng",109,0.67,0.6,0.64,0.64
+Nhà phát triển,112,0.57,0.61,0.66,0.68

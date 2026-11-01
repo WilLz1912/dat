@@ -1,0 +1,5 @@
+,đúng,thừa,thiếu,precision,recall,F1
+Cũ: từ khoá + M4,126.0,94.0,164.0,0.573,0.434,0.494
+A: từ khoá + DistilBERT cả câu,142.0,78.0,148.0,0.645,0.49,0.557
+Từ khoá + DistilBERT theo cặp,146.667,73.333,143.333,0.667,0.506,0.575
+Từ khoá trong đầu vào + DistilBERT theo cặp,183.333,129.0,106.667,0.593,0.632,0.609

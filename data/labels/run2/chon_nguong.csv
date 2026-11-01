@@ -1,0 +1,7 @@
+cách_chọn,seed,precision,recall,micro_f1,macro_f1
+Toàn bộ dev,0,0.513,0.738,0.605,0.663
+Dev ngẫu nhiên,0,0.53,0.719,0.61,0.657
+Toàn bộ dev,1,0.532,0.728,0.615,0.682
+Dev ngẫu nhiên,1,0.523,0.722,0.607,0.678
+Toàn bộ dev,2,0.526,0.738,0.614,0.621
+Dev ngẫu nhiên,2,0.597,0.676,0.634,0.681

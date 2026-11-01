@@ -1,0 +1,9 @@
+,đúng,thừa,thiếu,precision,recall,F1,tập
+Từ khoá + M4 (bản cũ),119.0,89.0,201.0,0.572,0.372,0.451,Test 2
+Từ khoá + DistilBERT cả câu,127.0,81.0,193.0,0.611,0.397,0.481,Test 2
+Từ khoá + theo cặp,132.667,75.333,187.333,0.638,0.414,0.502,Test 2
+Từ khoá trong đầu vào (+ toàn bộ train 2) + theo cặp,204.0,132.333,116.0,0.607,0.638,0.622,Test 2
+Từ khoá + M4 (bản cũ),126.0,94.0,164.0,0.573,0.434,0.494,Test 1
+Từ khoá + DistilBERT cả câu,140.0,80.0,150.0,0.636,0.483,0.549,Test 1
+Từ khoá + theo cặp,147.667,72.333,142.333,0.671,0.509,0.579,Test 1
+Từ khoá trong đầu vào (+ toàn bộ train 2) + theo cặp,200.0,135.333,90.0,0.596,0.69,0.64,Test 1

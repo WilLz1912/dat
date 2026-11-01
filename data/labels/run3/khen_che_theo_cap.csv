@@ -1,0 +1,8 @@
+nhóm,số cặp,M4 cả câu,DistilBERT cả câu,Theo cặp (+ toàn bộ train 2),Theo cặp (+ câu trái cảm xúc)
+Tất cả,765,0.742,0.835,0.898,0.898
+Test 2,320,0.728,0.812,0.888,0.89
+Câu 1 khía cạnh,451,0.705,0.818,0.906,0.909
+"Nhiều khía cạnh, cùng cảm xúc",259,0.849,0.927,0.959,0.952
+"Nhiều khía cạnh, trái cảm xúc",55,0.545,0.545,0.545,0.552
+Thật sự là Khen,238,0.895,0.87,0.826,0.812
+Thật sự là Chê,527,0.674,0.82,0.93,0.937
