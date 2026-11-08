@@ -1,0 +1,42 @@
+\chapter{Theoretical Background}
+\label{chap:background}
+
+This chapter introduces the concepts used in the project: text representation, the neural architectures for sentiment classification, transformers, aspect-based sentiment analysis and the evaluation metrics.
+
+\section{Sentiment Classification and Text Representation}
+
+Review sentiment is formulated as binary classification. Each review $x$ has a label $y \in \{0, 1\}$, where $y = 1$ means the reviewer recommended the game. A model outputs $\hat{p} = P(y = 1 \mid x)$ and is trained to minimise the binary cross-entropy
+\begin{equation}
+    \mathcal{L} = -\frac{1}{N}\sum_{i=1}^{N} \left[ y_i \log \hat{p}_i + (1 - y_i)\log(1 - \hat{p}_i) \right].
+\end{equation}
+The same loss is used for helpfulness ($y = 1$ if the review has a helpful vote) and, with one output per aspect, for aspect detection.
+
+Classical models represent a text as a sparse vector of term weights. TF-IDF weights a term $t$ in document $d$ by its frequency and its rarity in the collection, $\text{tfidf}(t, d) = \text{tf}(t, d) \cdot \log (N / \text{df}(t))$, where $N$ is the number of documents and $\text{df}(t)$ the number of documents containing $t$. Word n-grams (``not good'') capture short-range negation and character n-grams tolerate spelling errors. Logistic regression then models $\hat{p} = \sigma(\mathbf{w}^\top \mathbf{x} + b)$ with the sigmoid $\sigma(z) = 1/(1 + e^{-z})$; with L2 regularisation it is a strong baseline for review sentiment \cite{Pang2002}.
+
+\section{Neural Networks for Text}
+
+A neural text model maps each token to a dense vector through a learned embedding matrix. Three ways of turning the sequence of vectors into one review representation are used in this project:
+\begin{itemize}
+    \item \textbf{Average pooling} takes the mean of the token vectors; it is fast but ignores word order.
+    \item \textbf{LSTM} \cite{Hochreiter1997} reads the tokens in order and uses input, forget and output gates to decide what to keep in a memory cell, so it can capture negation and long-range context. A bidirectional LSTM runs one LSTM in each direction and concatenates their final states.
+    \item \textbf{1D convolution} \cite{Kim2014} slides filters over the sequence to detect local phrases such as ``not worth'' wherever they occur, and keeps the strongest response of each filter by global max pooling.
+\end{itemize}
+To limit overfitting, dropout randomly zeroes activations during training and early stopping keeps the weights with the best validation loss.
+
+\section{Transformers and DistilBERT}
+
+The transformer \cite{Vaswani2017} replaces recurrence by self-attention. With queries $Q$, keys $K$ and values $V$,
+\begin{equation}
+    \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right) V,
+\end{equation}
+so every token attends directly to every other token. BERT \cite{Devlin2019} pre-trains a deep transformer encoder on large text corpora by predicting masked words, and is then fine-tuned on a downstream task by adding a small output layer. Its input format \texttt{[CLS] text A [SEP] text B [SEP]} makes it natural to classify pairs of texts. DistilBERT \cite{Sanh2019} is a 6-layer version of BERT obtained by knowledge distillation; it is 40\% smaller and 60\% faster while keeping 97\% of BERT's language understanding, which makes it the largest model the team could fine-tune on a 4~GB GPU. Long inputs must be truncated, and keeping both the beginning and the end of a text works better than keeping only the beginning \cite{SunFinetune2019}.
+
+\section{Aspect-Based Sentiment Analysis}
+
+Aspect-based sentiment analysis (ABSA) decomposes an opinion into (aspect, polarity) pairs \cite{Pontiki2014}. With a fixed set of aspect categories it has two steps: \textbf{aspect detection}, a multi-label problem (a sentence may mention zero, one or several aspects), and \textbf{aspect polarity}, deciding for each detected aspect whether it is praised or criticised. A sentence-level model gives one polarity to the whole sentence and cannot handle ``great graphics but the servers are terrible''. Sun \textit{et al.} \cite{SunABSA2019} give the aspect to BERT as a second segment, \texttt{[CLS] aspect [SEP] sentence [SEP]}, so that the model scores that aspect only. We use this pairwise formulation for polarity, and a related idea for detection in which aspects proposed by keyword rules are given to the model as hints.
+
+\section{Evaluation Metrics}
+
+\textbf{ROC-AUC} is the main metric for binary tasks. It is the probability that a random positive example receives a higher score than a random negative one (0.5 is random guessing) and, unlike accuracy, it does not depend on a decision threshold. For aspect detection, precision $P = TP/(TP + FP)$, recall $R = TP/(TP + FN)$ and $F_1 = 2PR/(P + R)$ are computed by summing true positives, false positives and false negatives over all aspects (\textbf{micro F1}). In the end-to-end evaluation, a prediction is correct only if both the aspect and its polarity match the gold label.
+
+\textbf{Confidence intervals.} Test sets contain from a few hundred to about two thousand examples, so differences between models must be checked against sampling noise. We use the paired bootstrap: the test examples are resampled with replacement 2,000 times, the difference between two models is computed on each resample, and the 2.5th and 97.5th percentiles form a 95\% confidence interval (CI). If the CI excludes zero, the difference is unlikely to be due to the particular test sample.

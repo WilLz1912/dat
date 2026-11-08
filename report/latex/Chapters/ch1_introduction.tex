@@ -1,0 +1,47 @@
+\chapter{Introduction}
+\label{chap:introduction}
+
+Steam is the largest digital distribution platform for PC games, and its user reviews are a main source of information for players deciding what to buy and for developers trying to understand how their game is received. Each review consists of a free-text body and a binary verdict: the reviewer either \textit{recommends} the game or does not. Steam aggregates these verdicts into summary labels such as ``Mostly Positive''.
+
+The verdict is a coarse signal. It tells whether a player recommends a game, but not \textit{why}: one review may praise the graphics, criticise the crashes and still recommend the game. Moreover, many reviews are not serious evaluations at all: jokes, memes, sarcasm (``10/10 would never play again'') or texts that contradict the button the user pressed. Such reviews distort both the aggregated score and any analysis built on it.
+
+This project studies what can be learned from the text of Steam reviews beyond the verdict. Using 10,000 English reviews of 99 popular games collected by the team through the Steam API, we build and evaluate models for review sentiment, suspicious review detection, helpfulness prediction, aspect-based sentiment analysis and game recommendation. As the course focuses on TensorFlow, the core models are implemented with TensorFlow/Keras; following the instructor's feedback, the project was then extended with keyword features and a pre-trained transformer (DistilBERT).
+
+\section{Background and Motivation}
+
+Sentiment classification of reviews is one of the most studied problems in natural language processing. Bag-of-words classifiers already perform well on movie reviews \cite{Pang2002}, recurrent \cite{Hochreiter1997} and convolutional \cite{Kim2014} networks learn their own text representations, and pre-trained transformers such as BERT \cite{Devlin2019} have become the standard approach when labelled data are limited.
+
+Game reviews are a particular domain. In a study of the reviews of 6,224 Steam games, Lin \textit{et al.} \cite{Lin2019Steam} found that game reviews are relatively short, that the playtime before a review is a useful attribute specific to games, and that negative reviews carry most of the concrete complaints. Players use slang and inside jokes, mix praise and criticism, and often comment on patches and developers rather than on the game itself. This motivates two directions beyond plain sentiment classification: separating suspicious reviews from genuine ones, and identifying \textit{which aspects} of a game a review discusses. These tasks match practical needs: a platform can down-weight reviews that contradict their verdict or promote likely helpful reviews early, and a developer can see which aspects attract most criticism without reading hundreds of reviews. The instructor also suggested grouping games by genre and publisher to recommend similar games to players.
+
+\section{Literature Review}
+
+\textbf{Review-level sentiment.} Pang \textit{et al.} \cite{Pang2002} framed review sentiment as text classification with bag-of-words features and linear classifiers. Neural approaches replaced hand-crafted features with learned embeddings processed by LSTMs \cite{Hochreiter1997} or 1D convolutions \cite{Kim2014}. The transformer \cite{Vaswani2017} and large-scale pre-training \cite{Devlin2019} made it possible to fine-tune a general language model on a few thousand examples; DistilBERT \cite{Sanh2019} keeps most of BERT's accuracy with 40\% fewer parameters, which makes it practical on consumer GPUs.
+
+\textbf{Aspect-based sentiment analysis (ABSA).} The SemEval-2014 shared task \cite{Pontiki2014} standardised ABSA into aspect category detection and aspect polarity on restaurant and laptop reviews. Sun \textit{et al.} \cite{SunABSA2019} showed that BERT handles ABSA well when the aspect is given to the model as an auxiliary sentence; our pairwise polarity model follows this idea.
+
+\textbf{Sarcasm.} Riloff \textit{et al.} \cite{Riloff2013} describe sarcasm as a positive sentiment expressed about a negative situation, exactly the case where word-based classifiers fail and the text contradicts the reviewer's verdict.
+
+\textbf{Research gap.} Public ABSA benchmarks cover restaurants or laptops; game reviews have other aspects (performance, monetisation, online community, developer support) and more humour and sarcasm.
+
+\section{Problem Statement}
+
+Given an English Steam review (with playtime and verdict where available), the project addresses five problems:
+\begin{enumerate}
+    \item \textbf{Sentiment classification:} predict whether the review is positive or negative from its content.
+    \item \textbf{Suspicious review detection:} without labelled spam data, flag reviews whose content contradicts their verdict (sarcasm, trolling, misclicks) or that fail quality rules.
+    \item \textbf{Helpfulness prediction:} estimate whether a review will receive a helpful vote, controlling for how long it has been online.
+    \item \textbf{Aspect-based sentiment analysis:} detect which of eight aspects a sentence mentions and whether each is praised or criticised, then aggregate per game.
+    \item \textbf{Game recommendation:} group games by genre and publisher and recommend games from the same group to users who liked a game.
+\end{enumerate}
+
+\section{Objectives and Contributions}
+
+The objective is a reproducible pipeline that turns raw reviews into useful signals. Beyond solving the five tasks, the project documents the sampling biases of the data, compares five TensorFlow/Keras models with logistic regression baselines on known and unseen games, measures the gain of DistilBERT with confidence intervals and manual error analysis, evaluates the aspect pipeline on a test set labelled after the keywords were frozen, and packages the models into a local web application. The contribution is a careful comparison rather than a new architecture: which model helps, by how much, on which reviews, and where errors remain.
+
+\section{Scope and Limitations}
+
+The project covers English reviews of 99 games, binary sentiment and eight predefined aspects. The recommendation uses a small illustrative dataset with one review per user, so it is demonstrated but not quantitatively evaluated. Aspect labels were drafted by a large language model following written guidelines and double-checked by the team. Transformers run on Keras 3 with the PyTorch backend because recent TensorFlow releases do not support GPUs on native Windows. Chapter~\ref{chap:conclusion} discusses these limitations.
+
+\section{Structure of the Report}
+
+Chapter~\ref{chap:background} introduces the concepts and models used. Chapter~\ref{chap:data} describes the data, cleaning, exploration and labelling. Chapter~\ref{chap:methodology} presents the workflow, architectures and training setup. Chapter~\ref{chap:results} reports and analyses the results, and Chapter~\ref{chap:conclusion} concludes.

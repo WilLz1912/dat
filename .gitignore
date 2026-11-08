@@ -10,3 +10,4 @@ __pycache__/
 .ipynb_checkpoints/
 # trọng số transformer, quá lớn để đưa lên git
 models/transformer/
+tools/

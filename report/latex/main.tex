@@ -1,0 +1,123 @@
+% ============================================================
+%  Steam review analysis — project report
+%  Build: tools\tectonic\tectonic.exe -X compile main.tex   (or upload the folder to Overleaf)
+%  Title-page details (supervisor, date) are set just below.
+% ============================================================
+\documentclass[12pt,a4paper]{report}
+
+% ---------- Title-page details: edit here ----------
+\newcommand{\reporttitle}{STEAM REVIEW ANALYSIS: SENTIMENT CLASSIFICATION, ASPECT-BASED ANALYSIS AND GAME RECOMMENDATION}
+\newcommand{\supervisorname}{Mr. Bui Van Hieu} % add the academic title (e.g. MSc.) if needed
+\newcommand{\reportdate}{FPT University - November 2026}
+
+% ---------- Encoding & Language ----------
+\usepackage{iftex}
+\ifXeTeX
+  \usepackage{fontspec}
+  \usepackage[protrusion=true]{microtype}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+  \usepackage[protrusion=true,expansion=true]{microtype}
+\fi
+\usepackage[english]{babel}
+
+% ---------- Page Geometry & Spacing ----------
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+\onehalfspacing
+
+% ---------- Figures, Tables, Math ----------
+\usepackage{graphicx}
+\graphicspath{{figures/}{Images/}}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{ragged2e}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{xcolor}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\setlist{leftmargin=2em}
+\renewcommand{\arraystretch}{1.15}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+% let text and floats share pages instead of creating half-empty float pages
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{4}
+\setcounter{tocdepth}{1} % chapters and sections only: keeps the table of contents on one page
+
+% ---------- Links ----------
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={Steam Review Analysis: Sentiment Classification, Aspect-Based Analysis and Game Recommendation},
+}
+
+% ---------- Typography ----------
+\usepackage[none]{hyphenat}
+\sloppy
+
+% ---------- Diagrams ----------
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric,fit,calc}
+
+% ---------- Frame of title page ----------
+\newcommand{\pageframe}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \draw[line width=0.8pt]
+      ([xshift=1cm,yshift=-1cm]current page.north west)
+      rectangle
+      ([xshift=-1cm,yshift=1cm]current page.south east);
+  \end{tikzpicture}%
+  \begin{tikzpicture}[remember picture,overlay]
+    \draw[line width=0.8pt]
+      ([xshift=1.1cm,yshift=-1.1cm]current page.north west)
+      rectangle
+      ([xshift=-1.1cm,yshift=1.1cm]current page.south east);
+  \end{tikzpicture}%
+}
+
+\begin{document}
+
+\input{Preamble/titlepage}
+\input{Preamble/acknowledgement}
+\input{Preamble/abstract}
+
+\begin{singlespace}
+\makeatletter
+\renewcommand{\@makeschapterhead}[1]{{\parindent\z@\raggedright\normalfont\huge\bfseries #1\par\nobreak\vskip 20\p@}}
+\makeatother
+\tableofcontents
+\listoffigures
+\listoftables
+\end{singlespace}
+\clearpage
+
+\input{Chapters/ch1_introduction}
+\input{Chapters/ch2_background}
+\input{Chapters/ch3_data}
+\input{Chapters/ch4_methodology}
+\input{Chapters/ch5_results}
+\input{Chapters/ch6_conclusion}
+
+% ---------- References ----------
+\bibliographystyle{IEEEtran}
+\renewcommand{\bibname}{References}
+\bibliography{references}
+
+\end{document}

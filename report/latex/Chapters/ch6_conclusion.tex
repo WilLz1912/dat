@@ -1,0 +1,48 @@
+\chapter{Conclusion}
+\label{chap:conclusion}
+
+This project investigated what can be learned from the text of Steam reviews beyond the binary recommendation verdict.
+
+\section{Summary of Achievements}
+
+The data were cleaned into 9,971 reviews, and the exploration identified the text as the main signal and two sampling artefacts (timestamp and helpful votes) that would have leaked the label. Five Keras models trained from scratch reached a ROC-AUC of up to 0.902/0.905, on par with TF-IDF + LR and stable on unseen games. Out-of-fold predictions flagged 290 suspicious reviews (2.9\%), mostly sarcasm, mixed reviews and probable misclicks, and text features raised helpfulness prediction from a ROC-AUC of 0.62 (age only) to 0.79. Following the instructor's feedback, DistilBERT and keyword hints were added; Table~\ref{tab:summary} summarises the resulting gains. Applied to all 99 games, the aspect pipeline shows that players criticise performance and developers most and graphics least. A genre/publisher recommender and a local web application complete the project.
+
+\begin{table}[!htbp]
+\centering
+\caption{Summary of the main results}
+\label{tab:summary}
+\small
+\begin{tabularx}{\textwidth}{>{\RaggedRight\arraybackslash}p{4.3cm}Yll}
+\toprule
+\textbf{Task} & \textbf{Baseline} & \textbf{Best model} & \textbf{Result} \\
+\midrule
+Review sentiment, ROC-AUC (A / B) & TF-IDF + LR: 0.903 / 0.906 & DistilBERT & 0.937 / 0.930 \\
+Aspect detection, micro F1 (Test 2) & Keywords: 0.557 & Keywords-in-input & 0.682 \\
+Aspect polarity, accuracy & M4 whole sentence: 0.742 & Pairwise DistilBERT & 0.898 \\
+End-to-end pipeline, F1 (Test 2) & Keywords + M4: 0.451 & Keywords-in-input + pairwise & 0.622 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The transformer improves every row of Table~\ref{tab:summary}; for the first three rows the 95\% CI of the gain over the baseline excludes zero (no CI was computed for the end-to-end pipeline). Keywords help most as input hints and when labels are scarce. The pairwise model raises polarity accuracy overall but does not solve sentences with conflicting aspects. The project therefore shows not only that a deeper model helps, but by how much, on which reviews, and where it does not.
+
+\section{Limitations}
+
+\begin{itemize}
+    \item \textbf{Sampling.} The 50/50 sampling per game distorts sentiment ratios, helpful votes and timestamps; helpfulness results and per-game percentages should be read relatively.
+    \item \textbf{Small groups.} Audio, graphics and conflicting-aspect sentences have few test examples; conflicting-aspect accuracy remains about 0.55 ($n = 55$).
+    \item \textbf{Language and sarcasm.} Only English is handled, and mild sarcasm is often misclassified.
+    \item \textbf{Recommendation data.} The recommendation uses illustrative data with one review per user and has no quantitative evaluation.
+    \item \textbf{Environment.} Transformers run on Keras 3 with the PyTorch backend rather than TensorFlow, and are not yet integrated into the web application.
+\end{itemize}
+
+\section{Future Work}
+
+\begin{enumerate}
+    \item \textbf{Targeted labelling} of audio, graphics and conflicting-aspect sentences; the learning curve suggests a few more points for aspect detection.
+    \item \textbf{Clause-level polarity:} split sentences at contrastive connectives before scoring, or use a model that attends explicitly to the aspect position.
+    \item \textbf{Deploy the transformer models} in the web application so developers can see aspect summaries for their own reviews.
+    \item \textbf{Better data:} reviews in natural proportions with real user identifiers, enabling realistic statistics, a fair helpfulness evaluation and collaborative filtering.
+\end{enumerate}
+
+In summary, simple baselines, TensorFlow/Keras models and a fine-tuned transformer together turn Steam reviews into useful signals: what players think of a game, which reviews to distrust, and which aspects need attention.
