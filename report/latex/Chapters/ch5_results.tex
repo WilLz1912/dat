@@ -38,7 +38,7 @@ Table~\ref{tab:sentiment} leads to four observations:
 \begin{itemize}
     \item \textbf{The text carries most of the information.} Meta features alone reach a ROC-AUC of about 0.71, TF-IDF + LR on the text 0.90; adding meta features to TF-IDF adds only 0.005.
     \item \textbf{Keras models trained from scratch do not beat TF-IDF + LR.} With fewer than 7,000 training reviews, M1--M3 start to overfit after 2--3 epochs. M4 is the best single Keras model, and the ensemble M5 matches the LR baseline (0.902 versus 0.903 in scenario A).
-    \item \textbf{The models generalise to unseen games}: scores in scenario B are not lower than in scenario A, so the models learn general ways of praising and complaining rather than game-specific words.
+    \item \textbf{The models show broadly comparable performance on known and unseen games}, with only small differences in ROC-AUC across the two scenarios. This suggests reasonable generalisation to unseen games.
     \item \textbf{DistilBERT is the best model}, with a ROC-AUC of 0.937 (A) and 0.930 (B). The 95\% CI of its gain over TF-IDF + LR is $[+0.026, +0.047]$ in scenario A and $[+0.017, +0.037]$ in scenario B, well above the variation between seeds (about 0.002).
 \end{itemize}
 
