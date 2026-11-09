@@ -24,23 +24,24 @@ Game reviews are a particular domain. In a study of the reviews of 6,224 Steam g
 \textbf{Research gap.} Public ABSA benchmarks cover restaurants or laptops; game reviews have other aspects (performance, monetisation, online community, developer support) and more humour and sarcasm.
 
 \section{Problem Statement}
+\label{sec:problem}
 
 Given an English Steam review (with playtime and verdict where available), the project addresses five problems:
 \begin{enumerate}
-    \item \textbf{Sentiment classification:} predict whether the review is positive or negative from its content.
-    \item \textbf{Suspicious review detection:} without labelled spam data, flag reviews whose content contradicts their verdict (sarcasm, trolling, misclicks) or that fail quality rules.
-    \item \textbf{Helpfulness prediction:} estimate whether a review will receive a helpful vote, controlling for how long it has been online.
+    \item \textbf{Sentiment classification:} predict whether the review is positive or negative from its content, using the Steam verdict as a proxy label.
+    \item \textbf{Suspicious review detection:} without labelled spam data, flag reviews whose content contradicts their verdict (e.g.\ sarcasm, trolling, misclicks) or that fail quality rules, as candidates for human review rather than confirmed spam.
+    \item \textbf{Helpfulness prediction:} estimate whether a review had received at least one helpful vote at crawl time, controlling for how long it had been online.
     \item \textbf{Aspect-based sentiment analysis:} detect which of eight aspects a sentence mentions and whether each is praised or criticised, then aggregate per game.
     \item \textbf{Game recommendation:} group games by genre and publisher and recommend games from the same group to users who liked a game.
 \end{enumerate}
 
 \section{Objectives and Contributions}
 
-The objective is a reproducible pipeline that turns raw reviews into useful signals. Beyond solving the five tasks, the project documents the sampling biases of the data, compares five TensorFlow/Keras models with logistic regression baselines on known and unseen games, measures the gain of DistilBERT with confidence intervals and manual error analysis, evaluates the aspect pipeline on a test set labelled after the keywords were frozen, and packages the models into a local web application. The contribution is a careful comparison rather than a new architecture: which model helps, by how much, on which reviews, and where errors remain.
+The objective is a reproducible pipeline that turns raw reviews into useful signals. Beyond solving the five tasks, the project documents the sampling biases of the data, compares five TensorFlow/Keras models with logistic regression baselines on known and unseen games, measures the gain of DistilBERT with confidence intervals and manual error analysis, evaluates the aspect pipeline on a test set labelled after the keywords were frozen, and packages the review-level Keras models and the recommendation demo into a local web application. The contribution is a careful comparison rather than a new architecture: which model helps, by how much, on which reviews, and where errors remain.
 
 \section{Scope and Limitations}
 
-The project covers English reviews of 99 games, binary sentiment and eight predefined aspects. The recommendation uses a small illustrative dataset with one review per user, so it is demonstrated but not quantitatively evaluated. Aspect labels were drafted by a large language model following written guidelines and double-checked by the team. Transformers run on Keras 3 with the PyTorch backend because recent TensorFlow releases do not support GPUs on native Windows. Chapter~\ref{chap:conclusion} discusses these limitations.
+The project covers English reviews of 99 games, binary sentiment and eight predefined aspects. The recommendation uses a small illustrative dataset with one review per user, so it is demonstrated but not quantitatively evaluated. Aspect labels were drafted by a large language model following written guidelines and then fully reviewed by the team; no independent second annotation was made. Transformers run on Keras 3 with the PyTorch backend because recent TensorFlow releases do not support GPUs on native Windows. Chapter~\ref{chap:conclusion} discusses these limitations.
 
 \section{Structure of the Report}
 

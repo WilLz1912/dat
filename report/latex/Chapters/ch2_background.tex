@@ -5,11 +5,11 @@ This chapter introduces the concepts used in the project: text representation, t
 
 \section{Sentiment Classification and Text Representation}
 
-Review sentiment is formulated as binary classification. Each review $x$ has a label $y \in \{0, 1\}$, where $y = 1$ means the reviewer recommended the game. A model outputs $\hat{p} = P(y = 1 \mid x)$ and is trained to minimise the binary cross-entropy
+Review sentiment is formulated as binary classification. Each review $x$ has a label $y \in \{0, 1\}$, where $y = 1$ means the reviewer recommended the game. The Steam verdict is thus used as a \textbf{proxy label} for review-level sentiment; it is not necessarily identical to the sentiment expressed in the text, and such mismatches are the subject of Task 2. A model outputs $\hat{p} = P(y = 1 \mid x)$ and is trained to minimise the binary cross-entropy
 \begin{equation}
     \mathcal{L} = -\frac{1}{N}\sum_{i=1}^{N} \left[ y_i \log \hat{p}_i + (1 - y_i)\log(1 - \hat{p}_i) \right].
 \end{equation}
-The same loss is used for helpfulness ($y = 1$ if the review has a helpful vote) and, with one output per aspect, for aspect detection.
+The same loss is used for helpfulness ($y = 1$ if the review had at least one helpful vote at crawl time) and, with one output per aspect, for aspect detection.
 
 Classical models represent a text as a sparse vector of term weights. TF-IDF weights a term $t$ in document $d$ by its frequency and its rarity in the collection, $\text{tfidf}(t, d) = \text{tf}(t, d) \cdot \log (N / \text{df}(t))$, where $N$ is the number of documents and $\text{df}(t)$ the number of documents containing $t$. Word n-grams (``not good'') capture short-range negation and character n-grams tolerate spelling errors. Logistic regression then models $\hat{p} = \sigma(\mathbf{w}^\top \mathbf{x} + b)$ with the sigmoid $\sigma(z) = 1/(1 + e^{-z})$; with L2 regularisation it is a strong baseline for review sentiment \cite{Pang2002}.
 
@@ -33,7 +33,7 @@ so every token attends directly to every other token. BERT \cite{Devlin2019} pre
 
 \section{Aspect-Based Sentiment Analysis}
 
-Aspect-based sentiment analysis (ABSA) decomposes an opinion into (aspect, polarity) pairs \cite{Pontiki2014}. With a fixed set of aspect categories it has two steps: \textbf{aspect detection}, a multi-label problem (a sentence may mention zero, one or several aspects), and \textbf{aspect polarity}, deciding for each detected aspect whether it is praised or criticised. A sentence-level model gives one polarity to the whole sentence and cannot handle ``great graphics but the servers are terrible''. Sun \textit{et al.} \cite{SunABSA2019} give the aspect to BERT as a second segment, \texttt{[CLS] aspect [SEP] sentence [SEP]}, so that the model scores that aspect only. We use this pairwise formulation for polarity, and a related idea for detection in which aspects proposed by keyword rules are given to the model as hints.
+Aspect-based sentiment analysis (ABSA) decomposes an opinion into (aspect, polarity) pairs \cite{Pontiki2014}. With a fixed set of aspect categories it has two steps: \textbf{aspect detection}, a multi-label problem (a sentence may mention zero, one or several aspects), and \textbf{aspect polarity}, deciding for each detected aspect whether it is praised or criticised. A sentence-level model gives one polarity to the whole sentence and cannot handle ``great graphics but the servers are terrible''. Sun \textit{et al.} \cite{SunABSA2019} give the aspect to BERT as a second segment, \texttt{[CLS] aspect [SEP] sentence [SEP]}, so that the model scores that aspect only. In this project, polarity is treated as a binary task (positive or negative); aspects labelled neutral or unclear are kept in the data but excluded from polarity training and metrics. We use this pairwise formulation for polarity, and a related idea for detection in which aspects proposed by keyword rules are given to the model as hints.
 
 \section{Evaluation Metrics}
 

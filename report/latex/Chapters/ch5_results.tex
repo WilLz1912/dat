@@ -1,7 +1,7 @@
 \chapter{Results Analysis}
 \label{chap:results}
 
-This chapter reports the results of every task in the order of the problem statement, then discusses them. All numbers are measured on test data that were not used for training or model selection.
+This chapter reports the results of every task in the order of the problem statement, then discusses them. Held-out test sets are used to evaluate supervised prediction metrics. Out-of-fold suspicious-review flags, corpus-level aspect summaries and recommendation examples are reported separately as descriptive or illustrative analyses rather than independent test-set performance estimates.
 
 \section{Experimental Setup}
 
@@ -42,11 +42,11 @@ Table~\ref{tab:sentiment} leads to four observations:
     \item \textbf{DistilBERT is the best model}, with a ROC-AUC of 0.937 (A) and 0.930 (B). The 95\% CI of its gain over TF-IDF + LR is $[+0.026, +0.047]$ in scenario A and $[+0.017, +0.037]$ in scenario B, well above the variation between seeds (about 0.002).
 \end{itemize}
 
-\textbf{Error analysis.} M4 misses mild complaints more often than praise: on test set A, 25\% of negative reviews are classified as positive but only 13\% of positive reviews as negative, and accuracy drops from about 85\% for reviews longer than 50 words to 73\% for reviews of at most five words. The 500 manually labelled reviews show where the remaining difficulty lies (Table~\ref{tab:erroranalysis}). Both models are very accurate on clear reviews; jokes, mixed and unclear reviews are much harder. Reading the errors, DistilBERT reduces genuine model errors from 46 to 26, while errors caused by a Steam verdict that contradicts the text stay almost constant (13 and 14). No model can fix those, and they are exactly what Task 2 tries to find. Sarcasm such as ``Oh great, another update that breaks everything. Love it.'' is still read as positive by M4.
+\textbf{Error analysis.} M4 misses mild complaints more often than praise: on test set A, 25\% of negative reviews are classified as positive but only 13\% of positive reviews as negative, and accuracy drops from about 85\% for reviews longer than 50 words to 73\% for reviews of at most five words. The 500 labelled test reviews show where the remaining difficulty lies (Table~\ref{tab:erroranalysis}). Both models are very accurate on clear reviews; jokes, mixed and unclear reviews are much harder. Reading the errors, DistilBERT reduces genuine model errors from 46 to 26, while errors caused by a Steam verdict that contradicts the text stay almost constant (13 and 14). No model can fix those, and they are exactly what Task 2 tries to find. Sarcasm such as ``Oh great, another update that breaks everything. Love it.'' is still read as positive by M4.
 
 \begin{table}[!htbp]
 \centering
-\caption{ROC-AUC on the 500 manually labelled test reviews}
+\caption{ROC-AUC on the 500 labelled test reviews}
 \label{tab:erroranalysis}
 \begin{tabular}{lrcc}
 \toprule
@@ -89,13 +89,13 @@ Uncertain model ($|p - 0.5| < 0.1$), reported separately & 1,078 & 10.81 \\
     \label{fig:suspicious}
 \end{figure}
 
-The quality rules catch only 20 reviews, so the cleaned data contain little obvious spam; the mismatch criterion is more informative. Reading the flagged reviews reveals three groups: \textbf{sarcasm and trolling} (``10/10 would never play again'', not recommended), \textbf{mixed reviews} that list strengths but conclude ``I can't recommend it'' or list bugs and still recommend, and \textbf{probable misclicks} with entirely positive text and a negative verdict. Several competitive online games are among those with the most mismatched reviews, but even for them the share stays below 10\%. Without ground-truth labels the precision of the flags cannot be computed, so the output is meant as a ranked list for human moderators rather than an automatic filter.
+The quality rules catch only 20 reviews, so the cleaned data contain little obvious spam; the mismatch criterion is more informative. A qualitative reading of flagged reviews shows examples of three kinds: \textbf{sarcasm and trolling} (``10/10 would never play again'', not recommended), \textbf{mixed reviews} that list strengths but conclude ``I can't recommend it'' or list bugs and still recommend, and \textbf{probable misclicks} with entirely positive text and a negative verdict. Several competitive online games are among those with the most mismatched reviews, but even for them the share stays below 10\%. These are illustrative examples, not measured proportions: without ground-truth labels the precision of the flags cannot be computed. The flags are therefore potentially suspicious reviews, a ranked list for human moderators rather than an automatic filter or a confirmed spam count.
 
 \section{Task 3: Helpfulness Prediction}
 
 \begin{table}[!htbp]
 \centering
-\caption{Predicting whether a review receives at least one helpful vote (test set A)}
+\caption{Predicting whether a review had at least one helpful vote at crawl time (test set A)}
 \label{tab:helpful}
 \begin{tabular}{lccc}
 \toprule
@@ -109,7 +109,7 @@ Keras M4 + meta + age (class weights) & \textbf{0.611} & 0.761 & 0.605 \\
 \end{tabular}
 \end{table}
 
-Review age alone gives a ROC-AUC of 0.62, which confirms that it must be controlled for (Table~\ref{tab:helpful}). Meta features raise it to 0.77 and the text to 0.79, so content and length help beyond age. Keras M4 has a slightly lower ROC-AUC but the best F1 (0.61) thanks to class weighting. The strongest factor is the sentiment label: 51.9\% of negative reviews have a helpful vote against 13.2\% of positive ones, followed by review length. Because negative reviews in this dataset are also older, part of this effect comes from the sampling.
+Review age alone gives a ROC-AUC of 0.62, which confirms that it must be controlled for (Table~\ref{tab:helpful}). Meta features raise it to 0.77 and the text to 0.79, so content and length help beyond age. Keras M4 has a slightly lower ROC-AUC but the best F1 (0.61) thanks to class weighting. The strongest factor is the sentiment label: 51.9\% of negative reviews have a helpful vote against 13.2\% of positive ones, followed by review length. Because negative reviews in this dataset are also older, part of this effect comes from the sampling. As the label reflects votes present at crawl time, these results describe observed helpfulness and have not been validated as forecasts of future votes.
 
 \section{Task 4: Aspect-Based Sentiment Analysis}
 
@@ -139,19 +139,19 @@ Union of keywords and DistilBERT & 2,913 & 0.722 & 0.687 & 0.723 \\
 Table~\ref{tab:aspectdet} shows that:
 \begin{itemize}
     \item \textbf{The transformer clearly beats keywords and TF-IDF.} On Test 2 the selected model is 0.125 above the keywords (CI $[0.085, 0.169]$) and 0.080 above TF-IDF + LR (CI $[0.040, 0.120]$).
-    \item \textbf{Keyword hints help most when labels are scarce:} +0.033 over plain DistilBERT with 1,265 sentences, but only +0.003 with about 2,900 sentences, where the CI contains zero ($[-0.017, 0.024]$).
+    \item \textbf{Keyword hints help most when labels are scarce:} +0.033 over plain DistilBERT with 1,265 sentences. With more labels the difference is small: the dev-selected configuration (2,725 sentences) is +0.003 above plain DistilBERT trained on 2,913 sentences, a comparison across different training sizes whose CI contains zero ($[-0.017, 0.024]$); with the same 2,913 sentences the difference is +0.013, within the variation between seeds (up to 0.016). Neither shows that keyword hints are clearly superior once enough labels are available.
     \item \textbf{More labels help with diminishing returns}: +0.025, then +0.017 per additional 730 sentences.
     \item \textbf{Keywords alone have low recall} (precision 0.735, recall 0.448 on Test 2). Their higher score on Test 1 (0.640) reflects that they were written after reading that set, which justifies Test 2 as the main test set.
 \end{itemize}
-Per aspect, gameplay gains most over keywords (F1 0.47 to 0.71), because players describe gameplay in many ways that are hard to list. Online/community and developer remain harder (0.64 and 0.68), and audio (3 test sentences) and graphics (21) have too few examples for reliable conclusions.
+Per aspect, gameplay gains most over keywords (F1 0.47 to 0.71), because players describe gameplay in many ways that are hard to list. Online/community and developer remain harder (0.64 and 0.68), and audio (3 test sentences) and graphics (21) have too few examples for reliable conclusions. The primary configuration was selected by dev F1, not by the highest test score, which is why the 2,725-sentence variant is reported although the 2,913-sentence variant scores slightly higher on Test 2.
 
 \subsection{Aspect Polarity}
 
-On the 765 (sentence, aspect) pairs with a positive or negative gold label, the pairwise model reaches an accuracy of 0.898, against 0.689 for always predicting ``negative'' (Table~\ref{tab:polarity}).
+Aspect polarity is evaluated as a binary positive-versus-negative task on 765 (sentence, aspect) pairs, pooled from Test 1, the 110 extra sentences and Test 2; neutral and unclear annotations are outside this metric. On these pairs the pairwise model reaches an accuracy of 0.898, against 0.689 for always predicting ``negative'' (Table~\ref{tab:polarity}). On the 320 Test 2 pairs alone it reaches 0.888 (M4: 0.728, whole-sentence DistilBERT: 0.812).
 
 \begin{table}[!htbp]
 \centering
-\caption{Aspect polarity accuracy compared with whole-sentence models}
+\caption{Aspect polarity accuracy on the 765 pooled test pairs, compared with whole-sentence models}
 \label{tab:polarity}
 \begin{tabular}{lccc}
 \toprule
@@ -185,20 +185,20 @@ Keywords + pairwise DistilBERT & 0.638 & 0.414 & 0.502 & 0.579 \\
 \end{tabular}
 \end{table}
 
-The end-to-end F1 rises from 0.451 to 0.622 (Table~\ref{tab:pipeline}), almost entirely through recall (0.372 to 0.638) while precision stays similar: the final pipeline finds many more aspect opinions without proportionally more mistakes. Both test sets rank the four pipelines in the same order.
+The end-to-end F1 rises from 0.451 to 0.622 (Table~\ref{tab:pipeline}), driven mainly by higher recall (0.372 to 0.638) while precision stays similar (0.572 to 0.607): the final pipeline finds many more aspect opinions without proportionally more mistakes. The gain should not be attributed to the polarity model alone: with the same pairwise model, replacing keyword detection by keywords-in-input raises recall from 0.414 to 0.638, whereas the pairwise model adds 0.021 F1 over whole-sentence DistilBERT (0.481 to 0.502). Both test sets rank the four pipelines in the same order, but no confidence interval was computed for the end-to-end differences.
 
-Applied to all 33,025 sentences of the 99 games, the pipeline produced 24,223 (aspect, polarity) pairs; since some sentences were used in training, this is a description rather than an evaluation. Gameplay is by far the most discussed aspect (10,297 mentions). Players are most negative about performance and bugs (90.3\% of mentions) and developers (85.2\%), and least about graphics (31.0\%) and audio (43.7\%). Figure~\ref{fig:aspectgame} shows clear differences between games, the kind of summary a developer could use to prioritise fixes. The percentages should only be compared relatively, because of the 50/50 sampling per game, the longer negative reviews, the negative lean of the polarity model and the small number of sentences in some cells.
+For these corpus-level outputs, the deployed configuration differs from the evaluation configuration of Table~\ref{tab:aspectdet}: aspect detection uses keywords-in-input trained on all 2,913 sentences (dev F1 0.731, almost equal to 0.733), and polarity uses the dev-selected pairwise model; in each case the seed with the best dev score is used. Applied to all 33,025 sentences of the 99 games, this pipeline produced 24,223 (aspect, polarity) pairs; since some sentences were used in training, this is a description rather than an evaluation. Gameplay is by far the most discussed aspect (10,297 mentions). The share of predicted negative mentions in the sampled corpus is highest for performance and bugs (90.3\%) and developers (85.2\%), and lowest for graphics (31.0\%) and audio (43.7\%). Figure~\ref{fig:aspectgame} shows clear differences between games, the kind of summary a developer could use to prioritise fixes. These percentages describe model predictions on this sample, not the share of complaints in the whole Steam community, and should only be compared relatively, because of the 50/50 sampling per game, the longer negative reviews, the negative lean of the polarity model and the small number of sentences in some cells.
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.75\textwidth]{fig10_aspect_by_game.png}
-    \caption{Share of negative sentences (\%) per aspect for the 15 games with the most sentences; ``--'' marks fewer than 5 sentences.}
+    \caption{Share of predicted negative mentions (\%) per aspect for the 15 games with the most sentences; ``--'' marks fewer than 5 sentences.}
     \label{fig:aspectgame}
 \end{figure}
 
 \section{Task 5: Game Recommendation and Demo Application}
 
-Figure~\ref{fig:appreco} shows the recommendation page of the demo application for a user who liked \textit{Stardew Valley}. Its genre is ``Life \& Job Sim'' and its publisher has no other game in the data, so all candidates share the genre and are ranked by their positive rating (Euro Truck Simulator 2, Slime Rancher and Dave the Diver at 97\%, then Slime Rancher 2 and Supermarket Simulator). The graph groups games around genre and publisher nodes, as suggested by the instructor. Because each user has a single review and there is no record of what users played next, the recommendations cannot be evaluated quantitatively; the result demonstrates the method. The other pages of the application apply the Task 1--3 models: for example, a clearly positive review submitted as ``Not recommended'' receives a positive probability of 99\% and is flagged as suspicious, and the batch page summarises all reviews of a game with the share of negative reviews by playtime and the most frequent words in negative reviews.
+Figure~\ref{fig:appreco} shows the recommendation page of the demo application for a user who liked \textit{Stardew Valley}. Its genre is ``Life \& Job Sim'' and its publisher has no other game in the data, so all candidates share the genre and are ranked by their positive rating (Euro Truck Simulator 2, Slime Rancher and Dave the Diver at 97\%, then Slime Rancher 2 and Supermarket Simulator). The graph groups games around genre and publisher nodes, as suggested by the instructor. Because each user has a single review and there is no record of what users played next, no Precision@K, Recall@K or user feedback could be measured: the genre/publisher recommender demonstrates a content-based heuristic on illustrative data, and its recommendation quality has not been quantitatively evaluated. The other pages of the application apply the Task 1--3 models: for example, a clearly positive review submitted as ``Not recommended'' receives a positive probability of 99\% and is flagged as suspicious, and the batch page summarises all reviews of a game with the share of negative reviews by playtime and the most frequent words in negative reviews.
 
 \begin{figure}[!htbp]
     \centering
@@ -209,4 +209,4 @@ Figure~\ref{fig:appreco} shows the recommendation page of the demo application f
 
 \section{Discussion}
 
-The results answer the instructor's question about deeper models with a nuanced picture. A pre-trained transformer gives a clear and statistically reliable improvement on every main metric (summarised in Table~\ref{tab:summary}); models trained from scratch on 7,000 reviews do not. Keywords are most useful as hints inside the transformer and when few labels are available. Where the transformer did not help, namely sentences with conflicting aspects, a likely cause is that each aspect's polarity depends on the clause structure of the sentence, which the model does not learn from a few hundred examples. Finally, part of the remaining sentiment errors comes from the verdicts rather than from the models, and these reviews are precisely what the suspicious review detector is designed to surface.
+The results answer the instructor's question about deeper models with a nuanced picture. A pre-trained transformer improves review sentiment, aspect detection and pairwise polarity, and for these three comparisons the 95\% CI of the gain excludes zero (Table~\ref{tab:summary}); models trained from scratch on 7,000 reviews do not beat the linear baseline. The end-to-end gain has no CI, Tasks 2 and 3 were not repeated with a transformer, and the conflicting-polarity subgroup did not improve. Keywords are most useful as hints inside the transformer and when few labels are available. Where the transformer did not help, namely sentences with conflicting aspects, a likely cause is that each aspect's polarity depends on the clause structure of the sentence, which the model does not learn from a few hundred examples. Finally, part of the remaining sentiment errors comes from the verdicts rather than from the models, and these reviews are precisely what the suspicious review detector is designed to surface.

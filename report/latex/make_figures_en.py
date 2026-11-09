@@ -53,7 +53,7 @@ def hbars(ax, labels, series, colors, fmt="{:.3f}", xlim=None, h=.8):
 
 def flow():
     rows = [("Review-level tasks", ["Steam API\n10,000 reviews, 99 games", "Cleaning\n9,971 reviews", "EDA, feature\nselection", "Keras models\nM1–M5", "Sentiment, suspicious\nreviews, helpfulness"]),
-            ("Extension (instructor feedback)", ["Manual labels\n500 reviews, 4,610 sent.", "Aspect keyword\nlists", "DistilBERT\naspect detection", "Pairwise DistilBERT\naspect polarity", "Aspect sentiment\nper game"]),
+            ("Extension (instructor feedback)", ["LLM-assisted labels\n500 reviews, 4,461 sent.", "Aspect keyword\nlists", "DistilBERT\naspect detection", "Pairwise DistilBERT\naspect polarity", "Aspect sentiment\nper game"]),
             ("Game recommendation", ["Data Stream v2\n275 reviews, 92 games", "Genre and\npublisher tagging", "Game groups\n(graph)", "Same-group\ncandidates", "Recommendations\nfor a user"])]
     fig, ax = plt.subplots(figsize=(12, 4.1)); ax.axis("off"); ax.set_xlim(-.05, 11.4); ax.set_ylim(0, 4.05)
     w, hh, step = 1.95, .72, 2.35
@@ -95,7 +95,7 @@ def sentiment():
     save(fig, "fig03_sentiment_auc")
     fig, ax = plt.subplots(figsize=(7, 2.9))
     hbars(ax, ["Genuine model error", "Steam label contradicts text", "Mixed review", "Cannot be determined"], {"M4": [46, 13, 10, 28], "DistilBERT": [26, 14, 7, 22]}, [LIGHT, BLUE], "{:.0f}", (0, 52))
-    ax.set_xlabel("Misclassified reviews among the 500 manually read reviews")
+    ax.set_xlabel("Misclassified reviews among the 500 labelled test reviews")
     save(fig, "fig04_error_causes")
 
 
@@ -173,7 +173,7 @@ def run3():
     b = axs[0].barh(T.index, T.so_cau, .62, color=GREY); axs[0].bar_label(b, labels=[f"{v:,}" for v in T.so_cau], fontsize=8.5, color=MUTED, padding=2)
     axs[0].set_title("Detected aspect mentions"); axs[0].set_xlim(0, T.so_cau.max() * 1.18); axs[0].grid(axis="y", visible=False)
     b = axs[1].barh(T.index, T.pct_che, .62, color=BLUE); axs[1].bar_label(b, fmt="%.1f%%", fontsize=8.5, color=MUTED, padding=2)
-    axs[1].set_title("Share of negative mentions"); axs[1].set_xlim(0, 110); axs[1].grid(axis="y", visible=False)
+    axs[1].set_title("Share of predicted negative mentions"); axs[1].set_xlim(0, 110); axs[1].grid(axis="y", visible=False)
     fig.tight_layout(); save(fig, "fig11_aspect_totals")
 
 

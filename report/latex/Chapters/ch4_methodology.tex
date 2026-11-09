@@ -1,11 +1,11 @@
 \chapter{Methodology}
 \label{chap:methodology}
 
-This chapter describes how the models are designed, trained and evaluated: the overall workflow, the Keras models for the review-level tasks, the transformer models for sentiment and aspect analysis, the recommendation method, the demo application and the training setup.
+This chapter describes how the models are designed, trained and evaluated.
 
 \section{Overall Workflow}
 
-The project has three streams of work (Figure~\ref{fig:workflow}). The first builds review-level models with TensorFlow/Keras. The second, added after the instructor's feedback that the models were not deep enough, introduces manual labels, keyword lists and DistilBERT for sentiment and aspect analysis. The third builds the game recommendation on Data Stream v2.
+The project has three streams of work (Figure~\ref{fig:workflow}). The first builds review-level models with TensorFlow/Keras. The second, added after the instructor's feedback that the models were not deep enough, introduces LLM-assisted labels, keyword lists and DistilBERT for sentiment and aspect analysis. The third builds the game recommendation on Data Stream v2.
 
 \begin{figure}[!htbp]
     \centering
@@ -24,7 +24,7 @@ Three logistic regression (LR) baselines show how much information each input ca
 
 \subsection{Keras Architectures}
 
-All Keras models share the two-branch structure of Figure~\ref{fig:kerasarch}, built with the functional API. In the \textbf{text branch}, a \texttt{TextVectorization} layer inside the model turns the raw string into token indices (vocabulary of 20,000 tokens, 256 tokens per review, which covers about 96\% of reviews in full) or into a TF-IDF vector. The \textbf{meta branch} normalises the ten meta features. The branches are concatenated and followed by a dense layer, dropout and a sigmoid output. Because vectorisation is part of the model, a saved \texttt{.keras} file accepts raw text.
+All Keras models share the two-branch structure of Figure~\ref{fig:kerasarch}, built with the functional API. In the \textbf{text branch}, a \texttt{TextVectorization} layer inside the model turns the raw string into token indices (256 tokens cover about 96\% of reviews in full) or into a TF-IDF vector. The \textbf{meta branch} normalises the ten meta features. The branches are concatenated and followed by a dense layer, dropout and a sigmoid output. Because vectorisation is part of the model, a saved \texttt{.keras} file accepts raw text.
 
 \begin{figure}[!htbp]
 \centering
@@ -65,7 +65,7 @@ The models differ only in the text encoder (legend of Figure~\ref{fig:kerasarch}
 
 \subsection{Suspicious Review Detection}
 
-There are no labels for spam, trolling or sarcasm, so suspicious reviews are found from the disagreement between content and verdict, plus the quality rules (Algorithm~\ref{alg:suspicious}). M4 is trained in 5-fold cross-validation so that every review is scored by a model that has not seen it.
+There are no labels for spam, trolling or sarcasm, so suspicious reviews are found from the disagreement between content and verdict, plus the quality rules (Algorithm~\ref{alg:suspicious}). M4 is trained in 5-fold cross-validation so that every review is scored by a model that has not seen it. The output is a ranked list of candidates for human review, not an automatic spam filter.
 
 \begin{algorithm}[!htbp]
 \caption{Suspicious review detection}
@@ -83,11 +83,11 @@ There are no labels for spam, trolling or sarcasm, so suspicious reviews are fou
 \end{algorithmic}
 \end{algorithm}
 
-The thresholds 0.9 and 0.1 flag only reviews where the model is very confident; reviews with $p$ close to 0.5 are more often genuinely mixed and are reported separately as ``uncertain''.
+The thresholds 0.9 and 0.1 keep only confident disagreements; reviews with $p$ close to 0.5 are reported separately as ``uncertain''.
 
 \subsection{Helpfulness Prediction}
 
-The target is whether a review has at least one helpful vote (32.5\% of reviews); a binary target is used because 67.5\% of reviews have no vote. Older reviews have had more time to collect votes, so the log review age in days is added as a control variable, otherwise a model could learn that old reviews are helpful. Inputs are the text, the meta features, review age and the sentiment label. Four models are compared: LR on age only, LR on meta features and age, TF-IDF + meta + age with LR, and Keras M4 on the same inputs with class weights for the minority class.
+The target is whether a review had at least one helpful vote at crawl time (32.5\% of reviews), an observed label rather than a validated forecast of future votes; a binary target is used because 67.5\% of reviews have no vote. Older reviews have had more time to collect votes, so the log review age in days is added as a control variable. Inputs are the text, the meta features, review age and the sentiment label. Four models are compared: LR on age only, LR on meta features and age, TF-IDF + meta + age with LR, and Keras M4 on the same inputs with class weights for the minority class.
 
 \section{Transformer Models}
 
@@ -102,7 +102,7 @@ To measure the effect of labelled data, keywords-in-input is trained on 1,265, 1
 
 \subsection{Pairwise Aspect Polarity}
 
-For each (sentence, aspect) pair the model receives \texttt{[CLS] aspect [SEP] sentence [SEP]}, with the aspect as one word (``graphics'', ``performance'', \ldots), and predicts whether that aspect is praised or criticised \cite{SunABSA2019}. A sentence with two aspects thus gets two independent predictions. The encoder is initialised from a DistilBERT sentiment model fine-tuned on Steam labels, so it starts with knowledge of game-review sentiment. To target the hardest case, one training variant adds 188 sentences with a contrastive connective (``but'', ``however'') and at least two aspects. The baselines give every aspect of a sentence the sentence's polarity, predicted by M4 or by sentence-level DistilBERT.
+For each (sentence, aspect) pair the model receives \texttt{[CLS] aspect [SEP] sentence [SEP]}, with the aspect as one word (``graphics'', ``performance'', \ldots), and predicts whether that aspect is praised or criticised \cite{SunABSA2019}. A sentence with two aspects thus gets two independent predictions. Only pairs whose gold polarity is positive or negative are used, so this is a binary task. The encoder is initialised from a DistilBERT sentiment model fine-tuned on Steam labels, so it starts with knowledge of game-review sentiment. To target the hardest case, one training variant adds 188 sentences with a contrastive connective (``but'', ``however'') and at least two aspects. The baselines give every aspect of a sentence the sentence's polarity, predicted by M4 or by sentence-level DistilBERT.
 
 \subsection{End-to-End Aspect Pipeline}
 
@@ -136,7 +136,7 @@ with ties broken by the overall positive rating of $h$. Genre has the larger wei
 
 \section{Hyperparameters and Implementation}
 
-Table~\ref{tab:hparams} lists the training settings. Keras models stop early when the validation loss has not improved for two epochs; transformers are scored on dev after each epoch and the best epoch is kept.
+Table~\ref{tab:hparams} lists the training settings. Transformers are scored on dev after each epoch and the best epoch is kept.
 
 \begin{table}[!htbp]
 \centering
@@ -158,6 +158,4 @@ Seeds & 1 & 3 (2 for some aspect variants) \\
 \end{tabularx}
 \end{table}
 
-The implementation uses Python 3.12 with pandas, NumPy and Matplotlib. All Keras models M1--M5 and the helpfulness model use \textbf{TensorFlow/Keras 2.20} on CPU (20--75 seconds per model), and \textbf{scikit-learn} provides TF-IDF, the LR baselines, splitting and metrics. DistilBERT is fine-tuned with \textbf{Keras 3 and KerasHub on the PyTorch backend} on an NVIDIA GTX 1650 (4~GB), because recent TensorFlow versions do not support GPUs on native Windows; the model code is standard Keras. A sentiment run takes about 10 minutes and the final aspect experiment about 2.5 hours.
-
-The Keras models are served by a local \textbf{web application} (FastAPI and HTML/JavaScript) with pages for single-review analysis, batch moderation, a data overview and recommendation.
+The implementation uses Python 3.12 with pandas, NumPy, Matplotlib and \textbf{scikit-learn} (TF-IDF, LR baselines, splits, metrics). Keras models M1--M5 and the helpfulness model use \textbf{TensorFlow/Keras 2.20} on CPU (20--75 seconds per model). DistilBERT is fine-tuned with \textbf{Keras 3 and KerasHub on the PyTorch backend} on an NVIDIA GTX 1650 (4~GB), because recent TensorFlow versions do not support GPUs on native Windows (about 10 minutes per sentiment run, 2.5 hours for the final aspect experiment). A local \textbf{web application} (FastAPI and HTML/JavaScript) serves the Keras models of Tasks 1--3 and the recommendation (single-review analysis, batch moderation, data overview); the transformer checkpoints are not yet integrated into it.
